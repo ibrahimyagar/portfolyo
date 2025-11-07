@@ -195,7 +195,7 @@ const workExperiences = {
     {
       role: "Yazılım Stajyeri",
       company: "Arnavutköy Belediyesi Bilişim Akademisi",
-      companylogo: require("./assets/images/arnavutkoy-bilisim-akademisi.jpg"),
+      companylogo: require("./assets/images/arnavutkoy-bilisim-akademisi.png"),
       date: "Temmuz 2024 – Ağustos 2024",
       desc: "Java, Spring Boot ve React kullanarak Kütüphane Otomasyon Sistemi geliştirdim. Sistem; kitap yönetimi, kullanıcı yönetimi ve ödünç–iade işlemlerinin dijital ortamda takip edilmesini sağlamaktadır.",
       descBullets: [
@@ -211,7 +211,7 @@ const workExperiences = {
     {
       role: "Yazılım Stajyeri",
       company: "Arnavutköy Belediyesi Bilişim Akademisi",
-      companylogo: require("./assets/images/arnavutkoy-bilisim-akademisi.jpg"),
+      companylogo: require("./assets/images/arnavutkoy-bilisim-akademisi.png"),
       date: "Ağustos 2024 – Eylül 2024",
       desc: "ASP.NET Core MVC kullanılarak Eğitim Yönetim Platformu geliştirdim. Platformun amacı, öğretmen ve öğrencilerin çevrim içi sınıf ortamında etkileşim kurabilmelerini sağlamaktır.",
       descBullets: [
@@ -356,7 +356,7 @@ const achievementSection = {
       title: "Web Programlama Kursu",
       subtitle:
         "Tarih: Haz 2023. Arnavutköy Bilişim Akademisi'nde web programlama temelleri ve modern web geliştirme teknolojileri üzerine kapsamlı bir eğitim aldım. Temel Web Teknolojileri: HTML5, CSS3, JavaScript. Web Geliştirme: Responsive Tasarım, Bootstrap, DOM Manipülasyonu. Proje Yönetimi: Git, GitHub, Proje Geliştirme Süreçleri.",
-      image: require("./assets/images/arnavutkoy-bilisim-akademisi.jpg"),
+      image: require("./assets/images/arnavutkoy-bilisim-akademisi.png"),
       imageAlt: "Web Programming Logo",
       footerLink: [
         {name: "Sertifika", url: ""}
@@ -367,7 +367,7 @@ const achievementSection = {
       title: "NFT Tasarımı ve Metaverse Kursu",
       subtitle:
         "Tarih: Haz 2023. Arnavutköy Bilişim Akademisi'nde NFT tasarımı, blockchain teknolojisi ve metaverse dünyası hakkında kapsamlı bir eğitim aldım. NFT Tasarımı: Dijital Sanat, Koleksiyon Tasarımı, NFT Pazaryerleri. Blockchain Teknolojisi: Blockchain Temelleri, Akıllı Kontratlar, Kripto Para Birimleri. Metaverse: Sanal Dünya Platformları, 3D Tasarım, VR/AR Teknolojileri.",
-      image: require("./assets/images/arnavutkoy-bilisim-akademisi.jpg"),
+      image: require("./assets/images/arnavutkoy-bilisim-akademisi.png"),
       imageAlt: "NFT and Metaverse Logo",
       footerLink: [
         {name: "Sertifika", url: ""}
