@@ -195,7 +195,7 @@ const workExperiences = {
     {
       role: "Yazılım Stajyeri",
       company: "Arnavutköy Belediyesi Bilişim Akademisi",
-      companylogo: require("./assets/images/Arnavutkoy Bilisim Akademisi.jpg"),
+      companylogo: require("./assets/images/Arnavutkoy Bilisim Akademisi.jpeg"),
       date: "Temmuz 2024 – Ağustos 2024",
       desc: "Java, Spring Boot ve React kullanarak Kütüphane Otomasyon Sistemi geliştirdim. Sistem; kitap yönetimi, kullanıcı yönetimi ve ödünç–iade işlemlerinin dijital ortamda takip edilmesini sağlamaktadır.",
       descBullets: [
