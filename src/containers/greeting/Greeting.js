@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import {Fade} from "react-reveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
-import landingPerson from "../../assets/lottie/landingPerson";
+import coderAnimation from "../../assets/lottie/coder";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
@@ -24,8 +24,11 @@ export default function Greeting() {
                 className={isDark ? "dark-mode greeting-text" : "greeting-text"}
               >
                 {" "}
-                {greeting.title}{" "}
+                Merhaba ben<br />
+                <span>
+                  İbrahim Yağar{" "}
                 <span className="wave-emoji">{emoji("👋")}</span>
+                </span>
               </h1>
               <p
                 className={
@@ -39,22 +42,20 @@ export default function Greeting() {
               <div id="resume" className="empty-div"></div>
               <SocialMedia />
               <div className="button-greeting-div">
-                <Button text="Contact me" href="#contact" />
-                {greeting.resumeLink && (
-                  <a
-                    href={require("./resume.pdf")}
-                    download="Resume.pdf"
-                    className="download-link-button"
-                  >
-                    <Button text="Download my resume" />
-                  </a>
-                )}
+                <Button text="İletişime Geç" href="#contact" />
+                <a
+                  href={require("./resume.pdf")}
+                  download="Resume.pdf"
+                  className="download-link-button"
+                >
+                  <Button text="Özgeçmişimi İndir" />
+                </a>
               </div>
             </div>
           </div>
           <div className="greeting-image-div">
             {illustration.animated ? (
-              <DisplayLottie animationData={landingPerson} />
+              <DisplayLottie animationData={coderAnimation} style={{width: '80%', height: '80%'}} />
             ) : (
               <img
                 alt="man sitting on table"

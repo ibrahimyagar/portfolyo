@@ -4,10 +4,14 @@
   display: flex;
   width: 100%;
   overflow: hidden;
+  justify-content: center;
 }
 
 .skills-text-div {
-  margin-left: 50px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .skills-main-div > * {
@@ -23,9 +27,104 @@
 .skills-heading {
   font-size: 56px;
   font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
 }
+
 .subTitle {
   color: $subTitle;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+/* Categorized Skills Styles */
+.categorized-skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "backend frontend database"
+    ". tools .";
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.skill-category-card {
+  background: #f7fafc;
+  border-radius: 12px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+
+  // Shimmer effect on hover
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark-mode & {
+    background: #1a202c;
+    border-color: transparent;
+  }
+}
+
+.category-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #2d3748;
+  letter-spacing: 0.5px;
+
+  .dark-mode & {
+    color: white;
+  }
+}
+
+.skill-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.skill-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+  
+  i {
+    font-size: 45px;
+    color: #8b5cf6;
+    transition: all 0.3s ease;
+    display: inline-block;
+
+    &:hover {
+      transform: scale(1.2);
+      color: #a78bfa;
+    }
+  }
+
+  .skill-name {
+    font-size: 13px;
+    color: #4a5568;
+    text-align: center;
+    margin: 0;
+    font-weight: 400;
+    transition: all 0.3s ease;
+
+    .dark-mode & {
+      color: #e2e8f0;
+    }
+  }
 }
 
 /* Media Query */
@@ -34,6 +133,7 @@
     font-size: 40px;
   }
 }
+
 @media (max-width: 768px) {
   .skills-heading {
     font-size: 30px;
@@ -49,6 +149,7 @@
   .skills-text-div {
     margin-left: 0px;
     margin: 20px;
+    padding: 10px;
   }
   .skills-text {
     font-size: 16px;
@@ -58,7 +159,29 @@
     text-align: center;
   }
   .skills-image-div {
-    /* display: none; */
     order: 2;
+  }
+
+  .categorized-skills-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "backend"
+      "frontend"
+      "database"
+      "tools";
+    gap: 20px;
+  }
+
+  .skill-category-card {
+    padding: 20px;
+  }
+
+  .category-title {
+    font-size: 20px;
+  }
+
+  .skill-icons-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
   }
 }

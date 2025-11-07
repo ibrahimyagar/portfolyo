@@ -20,26 +20,26 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
+  username: "ℑ𝔟𝔯𝔞𝔥𝔦𝔪 𝔜𝔞𝔤𝔞𝔯",
+  title: "Merhaba ben İbrahim Yağar",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    "Merhaba, ben İbrahim Yağar. Bilgisayar Mühendisliği mezunuyum ve full-stack geliştirme alanında çalışmalar yapıyorum. Özellikle Java Spring Boot ve .NET Core ile backend geliştirme; React ile kullanıcı arayüzü geliştirme konularında deneyim sahibiyim. PostgreSQL, MySQL ve MS SQL veritabanlarıyla çalıştım. Projelerimde Docker, Git ve Jenkins kullanarak CI/CD süreçlerini kurguladım; mikroservis ve katmanlı mimari yaklaşımlarıyla ölçeklenebilir uygulamalar tasarladım. Yazılım geliştirme sürecinde Clean Code yaklaşımına ve SOLID prensiplerine dikkat etmeye özen gösteriyorum. Kariyer hedefim; güncel teknolojileri takip eden, sorumluluk alan, yenilikçi projelerde aktif rol oynayan ve bulunduğum ekibe değer katan bir yazılım geliştirici olarak kendimi sürekli geliştirmektir. 🚀"
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+    "", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
+  github: "https://github.com/ibrahimyagar",
+  linkedin: "https://linkedin.com/in/ibrahim-ya%C4%9Far-09580918b",
+  gmail: "ibrahimyagar.mh@gmail.com",
+  gitlab: "",
+  facebook: "",
+  medium: "",
+  stackoverflow: "",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -48,73 +48,95 @@ const socialMediaLinks = {
 // Skills Section
 
 const skillsSection = {
-  title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
-  skills: [
-    emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
-    ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
-    )
-  ],
+  title: "Deneyimlediğim Teknolojiler",
+  subTitle: "Projeler geliştirirken deneyimlediğim teknolojileri inceleyebilirsiniz.",
+  skills: [],
 
-  /* Make Sure to include correct Font Awesome Classname to view your icon
-https://fontawesome.com/icons?d=gallery */
-
-  softwareSkills: [
+  /* Categorized skills by technology type */
+  categorizedSkills: [
     {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
+      categoryName: "Backend",
+      gridArea: "backend",
+      skills: [
+        {
+          skillName: "Java",
+          fontAwesomeClassname: "fab fa-java"
+        },
+        {
+          skillName: "Spring Boot",
+          fontAwesomeClassname: "fab fa-java"
+        },
+        {
+          skillName: "C#",
+          fontAwesomeClassname: "fab fa-microsoft"
+        },
+        {
+          skillName: ".NET",
+          fontAwesomeClassname: "fab fa-microsoft"
+        },
+        {
+          skillName: "ASP.NET",
+          fontAwesomeClassname: "fab fa-microsoft"
+        }
+      ]
     },
     {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
+      categoryName: "Frontend",
+      gridArea: "frontend",
+      skills: [
+        {
+          skillName: "HTML5",
+          fontAwesomeClassname: "fab fa-html5"
+        },
+        {
+          skillName: "CSS3",
+          fontAwesomeClassname: "fab fa-css3-alt"
+        },
+        {
+          skillName: "JavaScript",
+          fontAwesomeClassname: "fab fa-js"
+        },
+        {
+          skillName: "React",
+          fontAwesomeClassname: "fab fa-react"
+        }
+      ]
     },
     {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
+      categoryName: "Database",
+      gridArea: "database",
+      skills: [
+        {
+          skillName: "PostgreSQL",
+          fontAwesomeClassname: "fas fa-database"
+        },
+        {
+          skillName: "MSSQL",
+          fontAwesomeClassname: "fas fa-database"
+        },
+        {
+          skillName: "MySQL",
+          fontAwesomeClassname: "fas fa-database"
+        }
+      ]
     },
     {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
-    },
-    {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
-    },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
-    },
-    {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    },
-    {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
-    },
-    {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
+      categoryName: "Tools",
+      gridArea: "tools",
+      skills: [
+        {
+          skillName: "Git",
+          fontAwesomeClassname: "fab fa-git-alt"
+        },
+        {
+          skillName: "Docker",
+          fontAwesomeClassname: "fab fa-docker"
+        },
+        {
+          skillName: "Jenkins",
+          fontAwesomeClassname: "fab fa-jenkins"
+        }
+      ]
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -126,23 +148,20 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+      schoolName: "Bandırma Onyedi Eylül Üniversitesi",
+      logo: require("./assets/images/bandirma-logo.png"),
+      subHeader: "Bilgisayar Mühendisliği",
+      duration: "Ağustos 2021 - Haziran 2025",
+      desc: "Full-stack development, veri yapıları, algoritmalar ve yazılım mühendisliği alanlarında eğitim aldım.",
+      descBullets: []
     },
     {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+      schoolName: "Erciyes Üniversitesi",
+      logo: require("./assets/images/eru-logo.png"),
+      subHeader: "Makine Mühendisliği",
+      duration: "Ağustos 2019 - Temmuz 2021",
+      desc: "Mühendislik temelleri, teknik düşünme ve problem çözme becerileri kazandım.",
+      descBullets: []
     }
   ]
 };
@@ -154,15 +173,15 @@ const techStack = {
   experience: [
     {
       Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
+      progressPercentage: "75%" //Insert relative proficiency in percentage
     },
     {
       Stack: "Backend",
-      progressPercentage: "70%"
+      progressPercentage: "80%"
     },
     {
-      Stack: "Programming",
-      progressPercentage: "60%"
+      Stack: "Veri Analizi",
+      progressPercentage: "65%"
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -174,29 +193,36 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: "Yazılım Stajyeri",
+      company: "Arnavutköy Belediyesi Bilişim Akademisi",
+      companylogo: require("./assets/images/Arnavutkoy Bilisim Akademisi.jpg"),
+      date: "Temmuz 2024 – Ağustos 2024",
+      desc: "Java, Spring Boot ve React kullanarak Kütüphane Otomasyon Sistemi geliştirdim. Sistem; kitap yönetimi, kullanıcı yönetimi ve ödünç–iade işlemlerinin dijital ortamda takip edilmesini sağlamaktadır.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Rol bazlı yetkilendirme, JWT kimlik doğrulama ve PostgreSQL veritabanı entegrasyonu ile güvenli ve ölçeklenebilir bir yapı oluşturuldu.",
+        "Kullanıcıların kayıt, giriş ve profil yönetimi",
+        "Kitap ekleme, düzenleme, silme ve stok takibi",
+        "Ödünç/iade süreç takibi ve gecikme kontrolü",
+        "Rol bazlı erişim (Kullanıcı / Yönetici)",
+        "React arayüzü ile kitap arama ve filtreleme",
+        "Teknolojiler: Spring Boot, Spring Security, JWT, PostgreSQL, JPA/Hibernate, React, Axios, Git/GitHub"
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Yazılım Stajyeri",
+      company: "Arnavutköy Belediyesi Bilişim Akademisi",
+      companylogo: require("./assets/images/Arnavutkoy Bilisim Akademisi.jpg"),
+      date: "Ağustos 2024 – Eylül 2024",
+      desc: "ASP.NET Core MVC kullanılarak Eğitim Yönetim Platformu geliştirdim. Platformun amacı, öğretmen ve öğrencilerin çevrim içi sınıf ortamında etkileşim kurabilmelerini sağlamaktır.",
+      descBullets: [
+        "Öğretmenler sınıf oluşturabilir, ödev ekleyebilir ve duyuru paylaşabilir; öğrenciler ise sınıfa katılabilir, ödevleri görüntüleyebilir ve teslim edebilir.",
+        "Rol Yönetimi: Öğretmen ve öğrenci rolleri Identity üzerinden yapılandırılmıştır.",
+        "Sınıf Yönetimi: Öğretmenler sınıf oluşturabilir ve sınıfa öğrencilerin katılması için kod paylaşabilir.",
+        "Ödev Sistemi: Öğretmen ödev yükleyebilir, öğrenci ödev teslim edebilir ve son teslim tarihleri görüntülenebilir.",
+        "Duyuru Akışı: Sınıf genelinde duyurular görüntülenebilir.",
+        "Materyal Yönetimi: Öğretmen ders materyalleri yükleyebilir ve öğrenciler bunları görüntüleyebilir.",
+        "Teknolojiler: C#, ASP.NET Core MVC, Identity Framework, Entity Framework Core, MSSQL, HTML/CSS, Bootstrap, JavaScript"
+      ]
     }
   ]
 };
@@ -206,36 +232,91 @@ To know how to get github key look at readme.md */
 
 const openSource = {
   showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Projeler",
+  subtitle: "",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/eduhub-logo-photoroom.png"),
+      projectName: "EduHub",
+      projectDesc: "Eğitim Platformu - Online Öğrenme ve Canlı Ders Sistemi",
+      technologies: [
+        "ASP.NET Core MVC",
+        ".NET 8.0",
+        "Entity Framework Core",
+        "SQL Server",
+        "Bootstrap 5",
+        "jQuery",
+        "Jitsi Meet",
+        "StackBlitz",
+        "iyzico"
+      ],
+      detailedDesc: "YouTube benzeri, eğitmen ve öğrencileri aynı platformda buluşturan kapsamlı bir online eğitim ve canlı ders deneyimi geliştirdim. Platform, eğitmenlerin içeriklerini ücretli veya ücretsiz yayınlamasını, öğrencilerin yorum ve puanlara göre eğitmen seçmesini ve kullanıcıların eş zamanlı olarak hem öğrenci hem eğitmen rolü üstlenmesini sağlar.\n\nTemel Özellikler:\n✅ Kullanıcı Yönetimi: ASP.NET Core Identity ile güvenli kimlik doğrulama ve yetkilendirme.\n✅ Sınıf Yönetimi: Öğretmenler sınıf oluşturabilir, öğrenciler benzersiz kod ile katılabilir.\n✅ Ödev Sistemi: Ödev oluşturma, dosya yükleme, puanlama ve teslim takibi.\n✅ Duyuru Sistemi: Sınıf içi duyuru paylaşımı ve yorum akışı.\n✅ Öğretmen Değerlendirme: Öğrenciler eğitmenleri puanlayıp yorum yazabilir.\n✅ Dosya Yönetimi: Ödev ve proje dosyaları için güvenli yükleme/saklama.\n✅ Arşivleme: Sınıfları arşivleme ve geri getirme özelliği.\n✅ Rol Yönetimi: Eğitmen ve öğrenci rolleriyle kapsamlı yetkilendirme.\n✅ Esnek Fiyatlandırma: Eğitimler ücretsiz başlayıp geri bildirimlere göre ücretliye dönebilir.\n✅ Proje İndirme: Öğrenciler çalışmalarını VSCode gibi editörlerde açılacak biçimde indirebilir.\n\nİleri Seviye Özellikler:\n🎥 Canlı Ders Desteği: Jitsi Meet entegrasyonu ile gerçek zamanlı video konferans.\n💻 Online Kod Editörü: StackBlitz entegrasyonu ile tarayıcıda kod yazma ve çalıştırma.\n💳 Ödeme Sistemi: iyzico entegrasyonu ile güvenli kurs satın alma.\n📚 Kurs Kataloğu: Açık katılımlı kurs listesi ve detay sayfaları.\n⭐ Eğitmen Puanlama: Şeffaf değerlendirme sistemi ile eğitmen kalitesi.\n🔐 Email doğrulama ve şifre sıfırlama akışları.\n🔒 Yetkilendirme kontrolleri ile güvenli erişim.\n📱 Responsive tasarım ile mobil uyumluluk.\n🎨 Bootstrap 5 ile modern ve sade arayüz tasarımı.\n\nTeknoloji ve Mimari:\n- Backend: ASP.NET Core 8.0 (MVC)\n- Veritabanı: Microsoft SQL Server & Entity Framework Core\n- Kimlik Doğrulama: ASP.NET Core Identity\n- Real-time İletişim: Jitsi Meet & SignalR\n- Frontend: Razor Views, Bootstrap 5, jQuery, JavaScript\n- Dosya Yönetimi: Çoklu dosya yükleme ve indirme altyapısı\n- Mimari: MVC katmanlı yapı, role-based authorization, Docker ile containerization",
+      screenshots: [
+        { image: require("./assets/images/eduhub-homepage.png"), name: "Ana Sayfa" },
+        { image: require("./assets/images/eduhub-dashboard.png"), name: "Kontrol Paneli" },
+        { image: require("./assets/images/eduhub-course-detail.png"), name: "Kurs Detayı" },
+        { image: require("./assets/images/eduhub-live-lesson.png"), name: "Canlı Ders" }
+      ],
       footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
-        }
-        //  you can add extra buttons here.
+        { name: "GitHub", url: "https://github.com/ibrahimyagar/EduHub" },
+        { name: "Canlı Demo", url: "" }
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/kutuphane-logo.png"),
+      projectName: "Kütüphane Yönetim Sistemi",
+      projectDesc: "ASP.NET Core MVC ile geliştirilmiş profesyonel kütüphane yönetim sistemi",
+      technologies: [
+        "ASP.NET Core MVC",
+        ".NET 7.0",
+        "Entity Framework Core",
+        "SQL Server",
+        "ASP.NET Core Identity",
+        "Bootstrap 5",
+        "jQuery",
+        "Razor Pages"
+      ],
+      detailedDesc: "ASP.NET Core MVC ile geliştirilmiş profesyonel bir kütüphane yönetim sistemidir. Bu sistem, kütüphanelerin kitap envanterini, kullanıcı işlemlerini ve kiralama süreçlerini dijitalleştirmek için tasarlanmıştır.\n\nTemel Özellikler:\n\nKitap Yönetimi: Kitap ekleme, güncelleme ve silme işlemleri, kitap bilgileri (ad, yazar, fiyat, tanım), kitap görsel yükleme desteği, kitap türüne göre kategorilendirme\n\nKitap Türü Yönetimi: Kitap türü ekleme ve düzenleme, kitap türü listeleme ve silme, kategorilere göre filtreleme\n\nKiralama İşlemleri: Kitap kiralama kayıtları, öğrenci-kitap eşleştirmesi, kiralama geçmişi takibi\n\nGüvenlik ve Yetkilendirme: ASP.NET Core Identity ile kullanıcı yönetimi, rol tabanlı yetkilendirme (Admin, Öğrenci), güvenli oturum yönetimi",
+      screenshots: [
+        { image: require("./assets/images/library-kitaplar.png"), name: "Kitaplar" },
+        { image: require("./assets/images/library-kitap-turleri.png"), name: "Kitap Türleri" },
+        { image: require("./assets/images/library-kitap-ekle.png"), name: "Kitap Ekle" },
+        { image: require("./assets/images/library-kitap-kirala.png"), name: "Kitap Kirala" }
+      ],
       footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://nextu.se/"
-        }
+        { name: "GitHub", url: "" },
+        { name: "Canlı Demo", url: "" }
+      ]
+    },
+    {
+      image: require("./assets/images/teachflow-logo.png"),
+      projectName: "TeachFlow",
+      projectDesc: "Öğretmenler ve öğrenciler için geliştirilmiş modern bir sınıf yönetim sistemi",
+      technologies: [
+        "ASP.NET Core MVC",
+        ".NET 8.0",
+        "Entity Framework Core",
+        "SQL Server",
+        "ASP.NET Core Identity",
+        "Bootstrap",
+        "jQuery"
+      ],
+      detailedDesc: "TeachFlow, öğretmenler ve öğrenciler için geliştirilmiş modern bir sınıf yönetim sistemidir. Bu platform, sınıf oluşturma, ödev yönetimi, duyuru sistemi ve öğrenci takibi gibi özellikler sunar.\n\nÖzellikler:\n\nSınıf Yönetimi:\nSınıf oluşturma ve benzersiz kod ile paylaşım\nSınıfa katılma (kod ile)\nSınıf arşivleme ve geri alma\nÖğretmen/Öğrenci rol yönetimi\n\nÖdev Yönetimi:\nÖdev oluşturma ve teslim tarihi belirleme\nÖdev gönderme ve puanlama sistemi\nÖdev listesi görüntüleme\nTeslim tarihi kontrolü\n\nDuyuru Sistemi:\nDuyuru ekleme ve yönetme\nDuyurulara yorum yapma\nDuyuru silme\n\nKullanıcı Yönetimi:\nASP.NET Core Identity ile kimlik doğrulama\nÖğrenci-Öğretmen rol ayrımı\nSınıf üyeleri yönetimi",
+      screenshots: [
+        { image: require("./assets/images/teachflow-anasayfa.png"), name: "Ana Sayfa" },
+        { image: require("./assets/images/teachflow-login.png"), name: "Giriş" },
+        { image: require("./assets/images/teachflow-dashboard.png"), name: "Kontrol Paneli" },
+        { image: require("./assets/images/teachflow-panel.png"), name: "Panel" }
+      ],
+      footerLink: [
+        { name: "GitHub", url: "" },
+        { name: "Canlı Demo", url: "" }
       ]
     }
   ],
@@ -246,57 +327,60 @@ const bigProjects = {
 // Include certificates, talks etc
 
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
+  title: emoji("Sertifikalar 🏆 "),
   subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
+    "Aldığım sertifikalar, tamamladığım kurslar ve katıldığım eğitimler !",
 
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
+      title: "Web Development with ASP.NET Core MVC 7.0",
       subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
+        "Tarih: Ağu 2024. ASP.NET Core MVC 7.0 ile modern web uygulamaları geliştirme konusunda kapsamlı bir eğitim aldım. Backend: ASP.NET Core MVC, C#, Entity Framework Core, SQL Server. Frontend: HTML, CSS, JavaScript, Bootstrap. Güvenlik: ASP.NET Core Identity, Authentication, Authorization.",
+      image: require("./assets/images/udemy-logo1.png"),
+      imageAlt: "Udemy Certificate",
       footerLink: [
-        {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-        },
-        {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-        },
-        {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
-        }
+        {name: "Sertifika", url: "/udemy-aspnet-core-mvc-7.0-certificate.pdf"}
       ]
     },
     {
-      title: "Google Assistant Action",
+      title: "Workintech Fullstack Bootcamp",
       subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
+        "960 saati aşkın yoğun eğitim sürecinde, 75 farklı proje ve 24 değerlendirme ile 10 ay boyunca hem frontend hem de backend alanında sağlam bir temel kazandım. Web & Temeller: HTML, CSS, JavaScript. Web Uygulama Geliştirme: React, Cypress.io. İleri Web Geliştirme: Redux, TanStack Query, TailwindCSS, OpenAI. Back-end: Java, Spring Boot, PostgreSQL, Hibernate.",
+      image: require("./assets/images/workintech.jpeg"),
+      imageAlt: "Bootcamp Logo",
       footerLink: [
-        {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-        }
+        {name: "Sertifika", url: ""}
+      ]
+    },
+    {
+      title: "Web Programlama Kursu",
+      subtitle:
+        "Tarih: Haz 2023. Arnavutköy Bilişim Akademisi'nde web programlama temelleri ve modern web geliştirme teknolojileri üzerine kapsamlı bir eğitim aldım. Temel Web Teknolojileri: HTML5, CSS3, JavaScript. Web Geliştirme: Responsive Tasarım, Bootstrap, DOM Manipülasyonu. Proje Yönetimi: Git, GitHub, Proje Geliştirme Süreçleri.",
+      image: require("./assets/images/Arnavutkoy Bilisim Akademisi.jpg"),
+      imageAlt: "Web Programming Logo",
+      footerLink: [
+        {name: "Sertifika", url: ""}
       ]
     },
 
     {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
+      title: "NFT Tasarımı ve Metaverse Kursu",
+      subtitle:
+        "Tarih: Haz 2023. Arnavutköy Bilişim Akademisi'nde NFT tasarımı, blockchain teknolojisi ve metaverse dünyası hakkında kapsamlı bir eğitim aldım. NFT Tasarımı: Dijital Sanat, Koleksiyon Tasarımı, NFT Pazaryerleri. Blockchain Teknolojisi: Blockchain Temelleri, Akıllı Kontratlar, Kripto Para Birimleri. Metaverse: Sanal Dünya Platformları, 3D Tasarım, VR/AR Teknolojileri.",
+      image: require("./assets/images/Arnavutkoy Bilisim Akademisi.jpg"),
+      imageAlt: "NFT and Metaverse Logo",
       footerLink: [
-        {name: "Certification", url: ""},
-        {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
-        }
+        {name: "Sertifika", url: ""}
+      ]
+    },
+    {
+      title: "Bilgisayar ve Yabancı Dil Sertifikası",
+      subtitle:
+        "Tarih: Nis 2017. Özçaba Bilgisayar ve Yabancı Dil Kursu'nda temel bilgisayar becerileri ve yabancı dil eğitimi aldım. Bilgisayar Becerileri: Microsoft Office, Windows İşletim Sistemi, Temel Bilgisayar Kullanımı. Yabancı Dil: İngilizce Dil Eğitimi, Okuma, Yazma, Konuşma Becerileri.",
+      image: require("./assets/images/ozcaba-logo.png"),
+      imageAlt: "Computer and Language Certificate",
+      footerLink: [
+        {name: "Sertifika", url: ""}
       ]
     }
   ],
@@ -324,7 +408,7 @@ const blogSection = {
         "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Talks Sections
@@ -343,44 +427,44 @@ const talkSection = {
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
 
 const podcastSection = {
   title: emoji("Podcast 🎙️"),
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
+  subtitle: "KENDİMDEN VE TEKNOLOJİDEN KONUŞMAYI SEVİYORUM",
 
   // Please Provide with Your Podcast embeded Link
   podcast: [
     "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Resume Section
 const resumeSection = {
-  title: "Resume",
-  subtitle: "Feel free to download my resume",
+  title: "Özgeçmiş",
+  subtitle: "Özgeçmişimi indirmekten çekinmeyin",
 
   // Please Provide with Your Podcast embeded Link
   display: true // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
+  title: emoji("İletişime Geçin ☎️"),
   subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+    "Bir proje hakkında konuşmak veya merhaba demek ister misiniz? Gelen kutum herkese açık.",
+  number: "+90 505 326 75 44",
+  email_address: "ibrahimyagar.mh@gmail.com"
 };
 
 // Twitter Section
 
 const twitterDetails = {
   userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  display: false // Set true to display this section, defaults to false
 };
 
 const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer

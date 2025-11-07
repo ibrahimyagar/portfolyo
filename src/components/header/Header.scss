@@ -36,6 +36,17 @@
 
 .grey-color {
   color: $subTitle;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.header .logo:hover .grey-color {
+  color: #667eea;
+  transform: scale(1.1);
+}
+
+.dark-menu .logo:hover .grey-color {
+  color: #a78bfa;
 }
 
 .header li a {
@@ -58,14 +69,69 @@
   text-decoration: none;
   margin-top: 10px;
   line-height: normal;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .header .logo-name {
-  font-family: "Agustina Regular";
-  font-weight: bold;
-  font-variant-ligatures: no-common-ligatures;
-  -webkit-font-variant-ligatures: no-common-ligatures;
+  font-family: "JetBrains Mono", "Consolas", "Fira Code", "Source Code Pro", monospace;
+  font-weight: 700;
   padding: 0 10px;
+  color: #000000;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  font-size: 1.1em;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #000000, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.dark-menu .logo-name {
+  font-family: "JetBrains Mono", "Consolas", "Fira Code", "Source Code Pro", monospace;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 2px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  font-size: 1.1em;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
+}
+
+.dark-menu .logo-name::after {
+  background: linear-gradient(90deg, transparent, #a78bfa, transparent);
 }
 
 /* menu */

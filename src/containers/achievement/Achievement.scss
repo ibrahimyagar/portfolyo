@@ -1,5 +1,9 @@
 @import "../../_globalColor";
 
+.achievement-main-div {
+  margin-top: 80px;
+}
+
 .achievement-heading {
   font-size: 56px;
   font-weight: 400;
@@ -15,6 +19,34 @@
   color: $subTitle;
 }
 
+.achievement-cards-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin: 2rem 0;
+}
+
+.achievement-cards-div {
+  display: flex;
+  gap: 1.5rem;
+  width: fit-content;
+  animation: slideCertificates 30s linear infinite;
+  will-change: transform;
+}
+
+@keyframes slideCertificates {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.achievement-cards-div:hover {
+  animation-play-state: paused;
+}
+
 /* Media Query */
 @media (max-width: 1380px) {
   .achievement-heading {
@@ -22,6 +54,9 @@
   }
 }
 @media (max-width: 768px) {
+  .achievement-main-div {
+    margin-top: 50px;
+  }
   .achievement-heading {
     font-size: 30px;
     text-align: center;
@@ -30,5 +65,9 @@
     font-size: 16px;
     line-height: normal;
     text-align: center;
+  }
+  .achievement-cards-div {
+    gap: 1rem;
+    animation-duration: 25s;
   }
 }

@@ -1,10 +1,38 @@
-import React, {createRef, useContext} from "react";
+import React, {createRef, useContext, useState, useEffect, useRef as useReactRef} from "react";
 import {Fade, Slide} from "react-reveal";
 import "./EducationCard.scss";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function EducationCard({school}) {
   const imgRef = createRef();
+  const cardRef = useReactRef(null);
+  const [animationKey, setAnimationKey] = useState(0);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Her görünür olduğunda animasyonu yeniden tetikle
+            setAnimationKey((prev) => prev + 1);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, []);
 
   const GetDescBullets = ({descBullets}) => {
     return descBullets
@@ -20,8 +48,8 @@ export default function EducationCard({school}) {
   if (!school.logo)
     console.error(`Image of ${school.name} is missing in education section`);
   return (
-    <div>
-      <Fade left duration={1000}>
+    <div ref={cardRef}>
+      <Fade key={`fade-${animationKey}`} left duration={1000}>
         <div className="education-card">
           {school.logo && (
             <div className="education-card-left">
@@ -64,7 +92,7 @@ export default function EducationCard({school}) {
           </div>
         </div>
       </Fade>
-      <Slide left duration={2000}>
+      <Slide key={`slide-${animationKey}`} left duration={2000}>
         <div className="education-card-border"></div>
       </Slide>
     </div>

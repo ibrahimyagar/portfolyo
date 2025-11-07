@@ -1,10 +1,20 @@
 @import "../../_globalColor";
 
+#projects .skills-heading {
+  text-align: left;
+}
+
 .card-image {
   max-width: 100%;
   height: auto;
   width: 250px;
+  transition: transform 0.4s ease;
 }
+
+.card-image.eduhub-logo {
+  width: 320px;
+}
+
 .card-title {
   color: $titleColor;
   font-size: 22px;
@@ -12,11 +22,18 @@
   font-weight: 700;
   margin: 15px 0 0 0;
 }
+
 .card-subtitle {
   color: $cardSubtitle;
   font-size: 17px;
   line-height: 1.5rem;
+  margin-bottom: 1rem;
 }
+
+.project-card-wrapper {
+  cursor: pointer;
+}
+
 .project-card {
   display: flex;
   flex-direction: column;
@@ -25,7 +42,13 @@
   border-radius: 10px;
   border: 1px solid $lightBorder1;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 100%;
+  transition: all 0.3s ease;
 }
+
 .project-card-light {
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
   -webkit-transition: all 0.3s ease;
@@ -35,56 +58,247 @@
 
 .project-card-dark {
   box-shadow: 0px 10px 30px -15px $darkBoxShadow;
+  background-color: $darkBackground;
+  color: $textColorDark;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
+}
+
+.project-card-light:hover {
+  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  transform: translateY(-5px);
+}
+
+.project-card-dark:hover {
+  box-shadow: 0px 20px 30px -10px $darkBoxShadow;
+  transform: translateY(-5px);
+}
+
+.project-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+.project-card:hover .detail-btn-text {
+  animation: buttonPulse 2s ease infinite;
+}
+
+@keyframes buttonPulse {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(76, 29, 149, 0.1);
+  }
+  50% {
+    box-shadow: 0 4px 12px rgba(76, 29, 149, 0.2);
+  }
+}
+
+.project-card-dark:hover .detail-btn-text {
+  animation: buttonPulseDark 2s ease infinite;
+}
+
+@keyframes buttonPulseDark {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(196, 181, 253, 0.2);
+  }
+  50% {
+    box-shadow: 0 4px 12px rgba(196, 181, 253, 0.3);
+  }
 }
 
 .project-detail {
   text-align: center;
 }
-.project-card-light:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
-}
-.project-card-dark:hover {
-  box-shadow: 0px 20px 30px -10px $darkBoxShadow;
-}
-.project-image {
-  position: relative;
-  height: 250px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem 1rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
-.project-card-footer span.project-tag {
-  background: $buttonColor;
-  color: $lightBackground3;
-  vertical-align: middle;
-  align-items: center;
-  border-radius: 4px;
-  display: inline-flex;
-  font-size: 0.75rem;
-  height: 2em;
+.project-image {
+  display: flex;
   justify-content: center;
-  white-space: nowrap;
-  line-height: 1.5;
-  margin: 0 0.5rem 0.5rem 0;
-  padding: 0 0.75em;
+  align-items: center;
+  margin-bottom: 1rem;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Teknoloji Rozetleri */
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.tech-badge-small {
+  background: #faf5ff;
+  color: #000000;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  i {
+    font-size: 14px;
+    color: #4c1d95;
+  }
+
+  span {
+    color: #000000;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.tech-badge-small.dark-mode {
+  background: #4c1d95;
+
+  i {
+    color: #c4b5fd;
+  }
+
+  span {
+    color: #ffffff;
+  }
+}
+
+.more-badge {
+  background: rgba(85, 25, 139, 0.3) !important;
+  color: #55198b;
+  font-weight: 600;
+}
+
+.more-badge.dark-mode {
+  background: rgba(124, 58, 237, 0.3) !important;
+  color: #a78bfa;
+}
+
+/* Detay Butonu */
+.project-detail-btn {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.detail-btn-text {
+  background: #faf5ff;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 25px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   cursor: pointer;
-  transition: 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(76, 29, 149, 0.1);
+
+  i {
+    font-size: 14px;
+    color: #4c1d95;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(76, 29, 149, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+  }
+
+  &:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(76, 29, 149, 0.25);
+    background: #f3e8ff;
+
+    i {
+      animation: arrowMove 0.8s ease infinite;
+    }
+
+    &::before {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px) scale(1.02);
+  }
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.project-card-dark .detail-btn-text {
+  background: #4c1d95;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(196, 181, 253, 0.2);
+
+  i {
+    color: #c4b5fd;
+  }
+
+  &::before {
+    background: rgba(196, 181, 253, 0.15);
+  }
+
+  &:hover {
+    background: #5b21b6;
+    box-shadow: 0 6px 20px rgba(196, 181, 253, 0.35);
+
+    i {
+      color: #e9d5ff;
+    }
+  }
 }
 
 @media (max-width: 768px) {
   .project-subtitle {
     font-size: 16px;
     text-align: center;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .project-card {
+    padding: 1.2rem;
+  }
+
+  .project-image {
+    height: 200px;
   }
 }

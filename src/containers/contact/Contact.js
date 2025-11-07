@@ -52,13 +52,14 @@ export default function Contact() {
               <SocialMedia />
             </div>
           </div>
-          <div className="contact-image-div">
+          <div className={`contact-image-div ${isDark ? "dark-mode" : ""}`}>
             {illustration.animated ? (
               <DisplayLottie animationData={email} />
             ) : (
               <img
                 alt="Man working"
                 src={require("../../assets/images/contactMailDark.svg")}
+                className={isDark ? "dark-mode-img" : ""}
               ></img>
             )}
           </div>

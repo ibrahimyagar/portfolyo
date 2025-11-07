@@ -95,10 +95,11 @@
   text-align: center;
   color: $textColor;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 23px;
   margin: 0px;
-  padding-top: 1.5rem;
-  line-height: normal;
+  padding-top: 2.5rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
 }
 .dark-mode-text {
   color: $textColorDark !important;
@@ -106,51 +107,163 @@
 .experience-text-date {
   text-align: center;
   color: $textColor;
-  font-size: 20px;
-  margin: 0px;
-  padding-top: 1rem;
+  font-size: 16px;
+  margin: 8px 0 0 0;
+  padding-top: 0;
   font-weight: 600;
+  opacity: 0.85;
+  letter-spacing: 0.01em;
 }
 
 .experience-text-desc {
   text-align: center;
+  margin: 1.5rem 0 1rem 0;
+  line-height: 1.9;
+  font-size: 15.5px;
+  letter-spacing: 0.01em;
 }
 
 .experience-text-details {
   padding: 1.5rem;
   margin-top: 2rem;
+
+  ul {
+    margin-top: 1rem;
+    padding-left: 0;
+
+    li {
+      text-align: left;
+      line-height: 2;
+      padding: 8px 0;
+      margin-bottom: 0;
+      font-size: 14.5px;
+      list-style-position: outside;
+      padding-left: 1.2rem;
+      position: relative;
+      letter-spacing: 0.01em;
+
+      &::marker {
+        color: #55198b;
+      }
+    }
+  }
+}
+
+/* Technology Icons Styles */
+.tech-list-item {
+  list-style: none !important;
+  padding-left: 0 !important;
+
+  &::marker {
+    display: none !important;
+  }
+}
+
+.tech-icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 12px;
+  margin-left: 1rem;
+  justify-content: flex-start;
+}
+
+.tech-icon-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  background: #faf5ff;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  i {
+    font-size: 14px;
+    color: #4c1d95;
+  }
+
+  .tech-name {
+    font-size: 12px;
+    color: #000000;
+    font-weight: 500;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.tech-icon-item.dark-mode {
+  background: #4c1d95;
+
+  i {
+    color: #c4b5fd;
+  }
+
+  .tech-name {
+    color: #ffffff;
+  }
 }
 
 /* Media Query */
 
 @media (max-width: 1380px) {
   .experience-text-role {
-    padding-top: 0.5rem;
-    font-size: 22px;
+    padding-top: 2rem;
+    font-size: 21px;
   }
   .experience-text-company {
     font-size: 22px;
   }
   .experience-text-date {
-    font-size: 18px;
+    font-size: 15px;
   }
   .experience-roundedimg {
     width: 6.5rem;
     height: 6.5rem;
   }
+  .experience-text-desc {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 768px) {
   .experience-text-role {
-    font-size: 22px;
+    font-size: 20px;
+    padding-top: 2rem;
   }
   .experience-text-company {
-    font-size: 22px;
+    font-size: 20px;
   }
   .experience-text-date {
-    font-size: 18px;
+    font-size: 14px;
   }
   .experience-text-desc {
-    font-size: 16px;
+    font-size: 14px;
+  }
+  .experience-text-details ul li {
+    font-size: 13px;
+  }
+
+  .tech-icon-item {
+    padding: 0.35rem 0.7rem;
+    font-size: 11px;
+
+    i {
+      font-size: 12px;
+    }
+
+    .tech-name {
+      font-size: 11px;
+    }
+  }
+
+  .tech-icons-container {
+    gap: 10px;
+    margin-left: 0.5rem;
   }
 }

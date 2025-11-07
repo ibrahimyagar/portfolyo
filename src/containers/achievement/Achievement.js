@@ -33,6 +33,7 @@ export default function Achievement() {
               {achievementSection.subtitle}
             </p>
           </div>
+          <div className="achievement-cards-wrapper">
           <div className="achievement-cards-div">
             {achievementSection.achievementsCards.map((card, i) => {
               return (
@@ -49,6 +50,22 @@ export default function Achievement() {
                 />
               );
             })}
+              {achievementSection.achievementsCards.map((card, i) => {
+                return (
+                  <AchievementCard
+                    key={`duplicate-${i}`}
+                    isDark={isDark}
+                    cardInfo={{
+                      title: card.title,
+                      description: card.subtitle,
+                      image: card.image,
+                      imageAlt: card.imageAlt,
+                      footer: card.footerLink
+                    }}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
