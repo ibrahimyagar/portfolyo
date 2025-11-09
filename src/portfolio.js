@@ -23,11 +23,54 @@ const greeting = {
   username: "ℑ𝔟𝔯𝔞𝔥𝔦𝔪 𝔜𝔞𝔤𝔞𝔯",
   title: "Merhaba ben İbrahim Yağar",
   subTitle: emoji(
-    "Merhaba, ben İbrahim Yağar. Bilgisayar Mühendisliği mezunuyum ve full-stack geliştirme alanında çalışmalar yapıyorum. Özellikle Java Spring Boot ve .NET Core ile backend geliştirme; React ile kullanıcı arayüzü geliştirme konularında deneyim sahibiyim. PostgreSQL, MySQL ve MS SQL veritabanlarıyla çalıştım. Projelerimde Docker, Git ve Jenkins kullanarak CI/CD süreçlerini kurguladım; mikroservis ve katmanlı mimari yaklaşımlarıyla ölçeklenebilir uygulamalar tasarladım. Yazılım geliştirme sürecinde Clean Code yaklaşımına ve SOLID prensiplerine dikkat etmeye özen gösteriyorum. Kariyer hedefim; güncel teknolojileri takip eden, sorumluluk alan, yenilikçi projelerde aktif rol oynayan ve bulunduğum ekibe değer katan bir yazılım geliştirici olarak kendimi sürekli geliştirmektir. 🚀"
+    "Full-stack geliştirici olarak Java Spring Boot, .NET Core ve React ile ölçeklenebilir çözümler geliştiriyorum."
   ),
   resumeLink:
     "", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
+};
+
+// About Section
+
+const aboutSection = {
+  display: true,
+  title: "Hakkımda",
+  description: [
+    "Merhaba, ben İbrahim Yağar. Bilgisayar Mühendisliği mezunuyum ve full-stack geliştirme alanında çalışmalar yapıyorum. Özellikle Java Spring Boot ve .NET Core ile backend geliştirme; React ile kullanıcı arayüzü geliştirme konularında deneyim sahibiyim. PostgreSQL, MySQL ve MS SQL veritabanlarıyla çalıştım. Projelerimde Docker, Git ve Jenkins kullanarak CI/CD süreçlerini kurguladım; mikroservis ve katmanlı mimari yaklaşımlarıyla ölçeklenebilir uygulamalar tasarladım. Yazılım geliştirme sürecinde Clean Code yaklaşımına ve SOLID prensiplerine dikkat etmeye özen gösteriyorum.",
+    "Kariyer hedefim; güncel teknolojileri takip eden, sorumluluk alan, yenilikçi projelerde aktif rol oynayan ve bulunduğum ekibe değer katan bir yazılım geliştirici olarak kendimi sürekli geliştirmektir."
+  ],
+  downloadGroups: [
+    {
+      locale: "tr",
+      flag: "🇹🇷",
+      label: "Türkçe",
+      items: [
+        {
+          text: "Özgeçmiş",
+          href: "/downloads/TR_CV.pdf"
+        },
+        {
+          text: "Niyet Mektubu",
+          href: "/downloads/niyet-mektubu.pdf"
+        }
+      ]
+    },
+    {
+      locale: "en",
+      flag: "🇬🇧",
+      label: "English",
+      items: [
+        {
+          text: "CV",
+          href: "/downloads/Eng_CV.pdf"
+        },
+        {
+          text: "Cover Letter",
+          href: "/downloads/cover-letter-en.pdf"
+        }
+      ]
+    }
+  ]
 };
 
 // Social Media Links
@@ -290,7 +333,7 @@ const bigProjects = {
         { image: require("./assets/images/library-kitap-kirala.png"), name: "Kitap Kirala" }
       ],
       footerLink: [
-        { name: "GitHub", url: "" },
+        { name: "GitHub", url: "https://github.com/ibrahimyagar/Kutuphane-Sistemi" },
         { name: "Canlı Demo", url: "" }
       ]
     },
@@ -315,7 +358,7 @@ const bigProjects = {
         { image: require("./assets/images/teachflow-panel.png"), name: "Panel" }
       ],
       footerLink: [
-        { name: "GitHub", url: "" },
+        { name: "GitHub", url: "https://github.com/ibrahimyagar/TeachFlow" },
         { name: "Canlı Demo", url: "" }
       ]
     }
@@ -472,6 +515,7 @@ const isHireable = false; // Set false if you are not looking for a job. Also is
 export {
   illustration,
   greeting,
+  aboutSection,
   socialMediaLinks,
   splashScreen,
   skillsSection,

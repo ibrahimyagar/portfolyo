@@ -35,11 +35,100 @@
 }
 
 .button-greeting-div {
-  display: flex;
-  margin-top: 40px;
+  margin-top: 24px;
 }
 .download-link-button {
   text-decoration: none;
+}
+
+.greeting-primary-button .main-button {
+  background: rgba(197, 173, 255, 0.6);
+  border: none;
+  color: #1f1f3d;
+  padding: 14px 28px;
+  border-radius: 18px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: 0 18px 35px rgba(168, 128, 255, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  backdrop-filter: blur(4px);
+  position: relative;
+  overflow: hidden;
+}
+
+.greeting-primary-button .main-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(124, 58, 237, 0.18);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.greeting-primary-button .main-button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 26px 48px rgba(124, 58, 237, 0.35);
+  background: rgba(197, 173, 255, 0.72);
+}
+
+.greeting-primary-button .main-button:hover::before {
+  width: 320px;
+  height: 320px;
+}
+
+.greeting-primary-button .main-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 32px rgba(124, 58, 237, 0.3);
+}
+
+.cta-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-arrow {
+  font-size: 1.2rem;
+  color: #5c2dd4;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.greeting-primary-button .main-button:hover .cta-arrow {
+  animation: greeting-arrow-move 0.9s ease-in-out infinite;
+}
+
+@keyframes greeting-arrow-move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.dark-mode .greeting-primary-button .main-button {
+  background: rgba(197, 173, 255, 0.6);
+  color: #1f1f3d;
+  box-shadow: 0 18px 35px rgba(168, 128, 255, 0.35);
+}
+
+.dark-mode .greeting-primary-button .main-button:hover {
+  box-shadow: 0 26px 48px rgba(168, 128, 255, 0.45);
+  background: rgba(197, 173, 255, 0.78);
 }
 
 .greeting-text {
@@ -55,6 +144,54 @@
 .greeting-text-p {
   font-size: 30px;
   line-height: 40px;
+}
+
+.typewriter-row {
+  font-size: 32px;
+  line-height: 36px;
+  color: #4f5665;
+  margin-top: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.typewriter-dynamic {
+  font-weight: 700;
+  display: inline-flex;
+  min-width: 300px;
+  background: linear-gradient(90deg, #a78bfa 0%, #8b5cf6 50%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.typewriter-row.dark .typewriter-dynamic {
+  background: linear-gradient(90deg, #c4b5fd 0%, #a78bfa 50%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.typewriter-static {
+  color: inherit;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 4px;
+  color: #9aa0b5;
+  animation: typewriter-blink 1s steps(2, start) infinite;
+}
+
+@keyframes typewriter-blink {
+  to {
+    visibility: hidden;
+  }
 }
 
 .greeting-image-div {
@@ -108,6 +245,46 @@
   }
 }
 
+.greeting-text-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-and-button {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 52px;
+}
+
+.social-media-div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.typewriter-trailing {
+  font-size: 32px;
+  line-height: 36px;
+  color: #4f5665;
+  margin-top: 0.4rem;
+  font-weight: 600;
+}
+
+.greeting-status {
+  font-size: 32px;
+  line-height: 36px;
+  margin-top: 0.4rem;
+  font-weight: 600;
+  color: #4f5665;
+}
+
+.typewriter-row.dark,
+.typewriter-trailing.dark,
+.greeting-status.dark {
+  color: rgba(226, 232, 240, 0.82);
+}
+
 /* Media Query */
 @media (max-width: 1380px) {
   .greeting-text {
@@ -125,9 +302,10 @@
     font-size: 30px;
     text-align: center;
   }
-  .greeting-text-p {
-    font-size: 16px;
-    line-height: normal;
+  .typewriter-row {
+    font-size: 18px;
+    line-height: 28px;
+    justify-content: center;
     text-align: center;
   }
   .greeting-main {

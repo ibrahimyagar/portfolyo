@@ -14,6 +14,7 @@ export default function Footer() {
             {/* Üst - Navigasyon Linkleri */}
             <div className="footer-nav">
               <a href="#greeting">Anasayfa</a>
+              <a href="#about">Hakkımda</a>
               <a href="#skills">Beceriler</a>
               <a href="#projects">Projeler</a>
               <a href="#contact">İletişim</a>
