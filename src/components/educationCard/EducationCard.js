@@ -15,11 +15,15 @@ export default function EducationCard({school}) {
   const [animationKey, setAnimationKey] = useState(0);
 
   useEffect(() => {
+    const observedNode = cardRef.current;
+    if (!observedNode) {
+      return undefined;
+    }
+
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // Her görünür olduğunda animasyonu yeniden tetikle
             setAnimationKey(prev => prev + 1);
           }
         });
@@ -29,16 +33,13 @@ export default function EducationCard({school}) {
       }
     );
 
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
-    }
+    observer.observe(observedNode);
 
     return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
-      }
+      observer.unobserve(observedNode);
+      observer.disconnect();
     };
-  }, []);
+  }, [cardRef]);
 
   const GetDescBullets = ({descBullets}) => {
     return descBullets

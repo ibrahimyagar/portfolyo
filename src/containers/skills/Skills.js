@@ -10,11 +10,15 @@ export default function Skills() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    const observedSection = sectionRef.current;
+    if (!observedSection) {
+      return undefined;
+    }
+
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // Her görünür olduğunda animasyonu yeniden tetikle
             setAnimationKey(prev => prev + 1);
           }
         });
@@ -24,16 +28,13 @@ export default function Skills() {
       }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    observer.observe(observedSection);
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
+      observer.unobserve(observedSection);
+      observer.disconnect();
     };
-  }, []);
+  }, [sectionRef]);
 
   if (!skillsSection.display) {
     return null;
