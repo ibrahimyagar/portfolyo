@@ -29,10 +29,8 @@
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
-  transition: background-color 0.3s ease,
-    backdrop-filter 0.3s ease,
-    opacity 0.3s ease,
-    visibility 0.3s ease;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease,
+    opacity 0.3s ease, visibility 0.3s ease;
   padding: 40px 20px;
   overflow-y: auto;
 }
@@ -265,7 +263,7 @@
   box-shadow: 0 2px 8px rgba(76, 29, 149, 0.1);
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -295,7 +293,8 @@
 }
 
 @keyframes buttonPulse {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 6px 20px rgba(76, 29, 149, 0.25);
   }
   50% {
@@ -316,7 +315,8 @@
 }
 
 @keyframes buttonPulseDark {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 6px 20px rgba(196, 181, 253, 0.35);
   }
   50% {
@@ -517,4 +517,3 @@
     font-size: 30px;
   }
 }
-

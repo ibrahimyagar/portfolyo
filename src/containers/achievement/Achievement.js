@@ -34,22 +34,22 @@ export default function Achievement() {
             </p>
           </div>
           <div className="achievement-cards-wrapper">
-          <div className="achievement-cards-div">
-            {achievementSection.achievementsCards.map((card, i) => {
-              return (
-                <AchievementCard
-                  key={i}
-                  isDark={isDark}
-                  cardInfo={{
-                    title: card.title,
-                    description: card.subtitle,
-                    image: card.image,
-                    imageAlt: card.imageAlt,
-                    footer: card.footerLink
-                  }}
-                />
-              );
-            })}
+            <div className="achievement-cards-div">
+              {achievementSection.achievementsCards.map((card, i) => {
+                return (
+                  <AchievementCard
+                    key={i}
+                    isDark={isDark}
+                    cardInfo={{
+                      title: card.title,
+                      description: card.subtitle,
+                      image: card.image,
+                      imageAlt: card.imageAlt,
+                      footer: card.footerLink
+                    }}
+                  />
+                );
+              })}
               {achievementSection.achievementsCards.map((card, i) => {
                 return (
                   <AchievementCard

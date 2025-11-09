@@ -85,10 +85,7 @@ function Header() {
               <a href="#talks">Konuşmalar</a>
             </li>
           )}
-          {viewResume && (
-            <li>
-            </li>
-          )}
+          {viewResume && <li></li>}
           <li>
             <a href="#contact">İletişim</a>
           </li>

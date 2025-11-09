@@ -78,7 +78,8 @@
 }
 
 .header .logo-name {
-  font-family: "JetBrains Mono", "Consolas", "Fira Code", "Source Code Pro", monospace;
+  font-family: "JetBrains Mono", "Consolas", "Fira Code", "Source Code Pro",
+    monospace;
   font-weight: 700;
   padding: 0 10px;
   color: #000000;
@@ -92,7 +93,7 @@
   text-rendering: optimizeLegibility;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 10px;
@@ -121,7 +122,8 @@
 }
 
 .dark-menu .logo-name {
-  font-family: "JetBrains Mono", "Consolas", "Fira Code", "Source Code Pro", monospace;
+  font-family: "JetBrains Mono", "Consolas", "Fira Code", "Source Code Pro",
+    monospace;
   color: #ffffff;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 2px 8px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;

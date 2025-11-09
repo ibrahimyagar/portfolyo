@@ -47,16 +47,16 @@ export default function About() {
       id="about"
       ref={sectionRef}
     >
-        <div className="about-content">
-          <div className="about-text">
-            <h2 className="about-title">{aboutSection.title}</h2>
-            <div className="about-description">
-              {aboutSection.description.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
-            </div>
+      <div className="about-content">
+        <div className="about-text">
+          <h2 className="about-title">{aboutSection.title}</h2>
+          <div className="about-description">
+            {aboutSection.description.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
           </div>
-          <div className="about-visual">
+        </div>
+        <div className="about-visual">
           <div className="about-photo-frame">
             <img src={aboutPhoto} alt="İbrahim Yağar" className="about-photo" />
           </div>
@@ -66,7 +66,11 @@ export default function About() {
             {aboutSection.downloadGroups.map(group => (
               <div className="download-group" key={group.locale}>
                 <div className="download-group-header">
-                  <span className="download-flag" role="img" aria-label={group.label}>
+                  <span
+                    className="download-flag"
+                    role="img"
+                    aria-label={group.label}
+                  >
                     {group.flag}
                   </span>
                   <span className="download-language">{group.label}</span>
@@ -87,12 +91,12 @@ export default function About() {
                       <span className="pill-text">{item.text}</span>
                     </a>
                   ))}
-          </div>
+                </div>
               </div>
             ))}
           </div>
         ) : null}
-        </div>
-      </section>
+      </div>
+    </section>
   );
 }

@@ -11,10 +11,7 @@ import StyleContext from "../../contexts/StyleContext";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
-  const roles = useMemo(
-    () => ["Java & Spring Boot", ".NET Core", "React"],
-    []
-  );
+  const roles = useMemo(() => ["Java & Spring Boot", ".NET Core", "React"], []);
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -65,7 +62,9 @@ export default function Greeting() {
         <div className="greeting-main">
           <div className="greeting-text-div">
             <div className="greeting-text-wrapper">
-              <h1 className={isDark ? "dark-mode greeting-text" : "greeting-text"}>
+              <h1
+                className={isDark ? "dark-mode greeting-text" : "greeting-text"}
+              >
                 {prefix}
                 <br />
                 {name}
@@ -78,10 +77,16 @@ export default function Greeting() {
                   <span className="typewriter-cursor">_</span>
                 </span>
               </p>
-              <p className={isDark ? "typewriter-trailing dark" : "typewriter-trailing"}>
+              <p
+                className={
+                  isDark ? "typewriter-trailing dark" : "typewriter-trailing"
+                }
+              >
                 ile ölçeklenebilir çözümler geliştiriyorum.
               </p>
-              <p className={isDark ? "greeting-status dark" : "greeting-status"}>
+              <p
+                className={isDark ? "greeting-status dark" : "greeting-status"}
+              >
                 Yeni fırsatları değerlendirmeye açığım.
               </p>
             </div>

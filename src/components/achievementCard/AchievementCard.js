@@ -12,8 +12,8 @@ export default function AchievementCard({cardInfo, isDark}) {
   }
 
   // Parse description to extract technologies and categories
-  const parseDescription = (description) => {
-    if (!description) return { mainText: "", technologies: [] };
+  const parseDescription = description => {
+    if (!description) return {mainText: "", technologies: []};
 
     // Split by periods to find technology sections
     const parts = description.split(/\.\s+/);
@@ -26,7 +26,10 @@ export default function AchievementCard({cardInfo, isDark}) {
       if (part.includes(":")) {
         const [category, techList] = part.split(":").map(s => s.trim());
         if (techList) {
-          const technologies = techList.split(",").map(t => t.trim()).filter(t => t);
+          const technologies = techList
+            .split(",")
+            .map(t => t.trim())
+            .filter(t => t);
           if (technologies.length > 0) {
             techCategories.push({
               category,
@@ -37,10 +40,10 @@ export default function AchievementCard({cardInfo, isDark}) {
       }
     }
 
-    return { mainText, techCategories };
+    return {mainText, techCategories};
   };
 
-  const { mainText, techCategories } = parseDescription(cardInfo.description);
+  const {mainText, techCategories} = parseDescription(cardInfo.description);
 
   return (
     <div className={isDark ? "dark-mode certificate-card" : "certificate-card"}>
@@ -73,9 +76,9 @@ export default function AchievementCard({cardInfo, isDark}) {
           </div>
         )}
         {!techCategories.length && cardInfo.description && (
-        <p className={isDark ? "dark-mode card-subtitle" : "card-subtitle"}>
-          {cardInfo.description}
-        </p>
+          <p className={isDark ? "dark-mode card-subtitle" : "card-subtitle"}>
+            {cardInfo.description}
+          </p>
         )}
       </div>
       <div className="certificate-card-footer">

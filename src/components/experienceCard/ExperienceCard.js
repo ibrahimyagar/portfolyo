@@ -18,15 +18,15 @@ export default function ExperienceCard({cardInfo, isDark}) {
   }
 
   // Technology icon mapping
-  const getTechIcon = (techName) => {
+  const getTechIcon = techName => {
     const techMap = {
       "Spring Boot": "fab fa-java",
       "Spring Security": "fab fa-java",
-      "JWT": "fas fa-shield-alt",
-      "PostgreSQL": "fas fa-database",
+      JWT: "fas fa-shield-alt",
+      PostgreSQL: "fas fa-database",
       "JPA/Hibernate": "fas fa-layer-group",
-      "React": "fab fa-react",
-      "Axios": "fas fa-globe",
+      React: "fab fa-react",
+      Axios: "fas fa-globe",
       "Git/GitHub": "fab fa-git-alt",
       "C#": "fab fa-microsoft",
       ".NET": "fab fa-microsoft",
@@ -39,34 +39,34 @@ export default function ExperienceCard({cardInfo, isDark}) {
       "Razor Pages": "fab fa-microsoft",
       "Entity Framework Core": "fas fa-database",
       "SQL Server": "fas fa-database",
-      "MSSQL": "fas fa-database",
+      MSSQL: "fas fa-database",
       "HTML/CSS": "fab fa-html5",
-      "HTML": "fab fa-html5",
-      "CSS": "fab fa-css3-alt",
-      "CSS3": "fab fa-css3-alt",
-      "HTML5": "fab fa-html5",
-      "Bootstrap": "fab fa-bootstrap",
+      HTML: "fab fa-html5",
+      CSS: "fab fa-css3-alt",
+      CSS3: "fab fa-css3-alt",
+      HTML5: "fab fa-html5",
+      Bootstrap: "fab fa-bootstrap",
       "Bootstrap 5": "fab fa-bootstrap",
-      "JavaScript": "fab fa-js",
-      "jQuery": "fab fa-js",
+      JavaScript: "fab fa-js",
+      jQuery: "fab fa-js",
       "Node.js": "fab fa-node-js",
       "Jitsi Meet": "fas fa-video",
-      "StackBlitz": "fas fa-code",
-      "iyzico": "fas fa-credit-card"
+      StackBlitz: "fas fa-code",
+      iyzico: "fas fa-credit-card"
     };
-    
+
     // Try to find exact match first
     if (techMap[techName]) {
       return techMap[techName];
     }
-    
+
     // Try partial match
     for (const [key, icon] of Object.entries(techMap)) {
       if (techName.includes(key) || key.includes(techName)) {
         return icon;
       }
     }
-    
+
     return "fas fa-code"; // Default icon
   };
 
@@ -78,13 +78,21 @@ export default function ExperienceCard({cardInfo, isDark}) {
       if (item.includes("Teknolojiler:")) {
         const techList = item.replace("Teknolojiler:", "").trim();
         const technologies = techList.split(",").map(t => t.trim());
-        
+
         return (
-          <li key={i} className={`${isDark ? "subTitle dark-mode-text" : "subTitle"} tech-list-item`}>
+          <li
+            key={i}
+            className={`${
+              isDark ? "subTitle dark-mode-text" : "subTitle"
+            } tech-list-item`}
+          >
             <span style={{fontWeight: "bold"}}>Teknolojiler:</span>
             <div className="tech-icons-container">
               {technologies.map((tech, techIndex) => (
-                <span key={techIndex} className={`tech-icon-item ${isDark ? "dark-mode" : ""}`}>
+                <span
+                  key={techIndex}
+                  className={`tech-icon-item ${isDark ? "dark-mode" : ""}`}
+                >
                   <i className={getTechIcon(tech)}></i>
                   <span className="tech-name">{tech}</span>
                 </span>
@@ -93,7 +101,7 @@ export default function ExperienceCard({cardInfo, isDark}) {
           </li>
         );
       }
-      
+
       // Regular bullet point
       return (
         <li key={i} className={isDark ? "subTitle dark-mode-text" : "subTitle"}>

@@ -25,8 +25,7 @@ const greeting = {
   subTitle: emoji(
     "Full-stack geliştirici olarak Java Spring Boot, .NET Core ve React ile ölçeklenebilir çözümler geliştiriyorum."
   ),
-  resumeLink:
-    "", // Set to empty to hide the button
+  resumeLink: "", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -92,7 +91,8 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "Deneyimlediğim Teknolojiler",
-  subTitle: "Projeler geliştirirken deneyimlediğim teknolojileri inceleyebilirsiniz.",
+  subTitle:
+    "Projeler geliştirirken deneyimlediğim teknolojileri inceleyebilirsiniz.",
   skills: [],
 
   /* Categorized skills by technology type */
@@ -299,22 +299,36 @@ const bigProjects = {
         "StackBlitz",
         "iyzico"
       ],
-      detailedDesc: "YouTube benzeri, eğitmen ve öğrencileri aynı platformda buluşturan kapsamlı bir online eğitim ve canlı ders deneyimi geliştirdim. Platform, eğitmenlerin içeriklerini ücretli veya ücretsiz yayınlamasını, öğrencilerin yorum ve puanlara göre eğitmen seçmesini ve kullanıcıların eş zamanlı olarak hem öğrenci hem eğitmen rolü üstlenmesini sağlar.\n\nTemel Özellikler:\n✅ Kullanıcı Yönetimi: ASP.NET Core Identity ile güvenli kimlik doğrulama ve yetkilendirme.\n✅ Sınıf Yönetimi: Öğretmenler sınıf oluşturabilir, öğrenciler benzersiz kod ile katılabilir.\n✅ Ödev Sistemi: Ödev oluşturma, dosya yükleme, puanlama ve teslim takibi.\n✅ Duyuru Sistemi: Sınıf içi duyuru paylaşımı ve yorum akışı.\n✅ Öğretmen Değerlendirme: Öğrenciler eğitmenleri puanlayıp yorum yazabilir.\n✅ Dosya Yönetimi: Ödev ve proje dosyaları için güvenli yükleme/saklama.\n✅ Arşivleme: Sınıfları arşivleme ve geri getirme özelliği.\n✅ Rol Yönetimi: Eğitmen ve öğrenci rolleriyle kapsamlı yetkilendirme.\n✅ Esnek Fiyatlandırma: Eğitimler ücretsiz başlayıp geri bildirimlere göre ücretliye dönebilir.\n✅ Proje İndirme: Öğrenciler çalışmalarını VSCode gibi editörlerde açılacak biçimde indirebilir.\n\nİleri Seviye Özellikler:\n🎥 Canlı Ders Desteği: Jitsi Meet entegrasyonu ile gerçek zamanlı video konferans.\n💻 Online Kod Editörü: StackBlitz entegrasyonu ile tarayıcıda kod yazma ve çalıştırma.\n💳 Ödeme Sistemi: iyzico entegrasyonu ile güvenli kurs satın alma.\n📚 Kurs Kataloğu: Açık katılımlı kurs listesi ve detay sayfaları.\n⭐ Eğitmen Puanlama: Şeffaf değerlendirme sistemi ile eğitmen kalitesi.\n🔐 Email doğrulama ve şifre sıfırlama akışları.\n🔒 Yetkilendirme kontrolleri ile güvenli erişim.\n📱 Responsive tasarım ile mobil uyumluluk.\n🎨 Bootstrap 5 ile modern ve sade arayüz tasarımı.\n\nTeknoloji ve Mimari:\n- Backend: ASP.NET Core 8.0 (MVC)\n- Veritabanı: Microsoft SQL Server & Entity Framework Core\n- Kimlik Doğrulama: ASP.NET Core Identity\n- Real-time İletişim: Jitsi Meet & SignalR\n- Frontend: Razor Views, Bootstrap 5, jQuery, JavaScript\n- Dosya Yönetimi: Çoklu dosya yükleme ve indirme altyapısı\n- Mimari: MVC katmanlı yapı, role-based authorization, Docker ile containerization",
+      detailedDesc:
+        "YouTube benzeri, eğitmen ve öğrencileri aynı platformda buluşturan kapsamlı bir online eğitim ve canlı ders deneyimi geliştirdim. Platform, eğitmenlerin içeriklerini ücretli veya ücretsiz yayınlamasını, öğrencilerin yorum ve puanlara göre eğitmen seçmesini ve kullanıcıların eş zamanlı olarak hem öğrenci hem eğitmen rolü üstlenmesini sağlar.\n\nTemel Özellikler:\n✅ Kullanıcı Yönetimi: ASP.NET Core Identity ile güvenli kimlik doğrulama ve yetkilendirme.\n✅ Sınıf Yönetimi: Öğretmenler sınıf oluşturabilir, öğrenciler benzersiz kod ile katılabilir.\n✅ Ödev Sistemi: Ödev oluşturma, dosya yükleme, puanlama ve teslim takibi.\n✅ Duyuru Sistemi: Sınıf içi duyuru paylaşımı ve yorum akışı.\n✅ Öğretmen Değerlendirme: Öğrenciler eğitmenleri puanlayıp yorum yazabilir.\n✅ Dosya Yönetimi: Ödev ve proje dosyaları için güvenli yükleme/saklama.\n✅ Arşivleme: Sınıfları arşivleme ve geri getirme özelliği.\n✅ Rol Yönetimi: Eğitmen ve öğrenci rolleriyle kapsamlı yetkilendirme.\n✅ Esnek Fiyatlandırma: Eğitimler ücretsiz başlayıp geri bildirimlere göre ücretliye dönebilir.\n✅ Proje İndirme: Öğrenciler çalışmalarını VSCode gibi editörlerde açılacak biçimde indirebilir.\n\nİleri Seviye Özellikler:\n🎥 Canlı Ders Desteği: Jitsi Meet entegrasyonu ile gerçek zamanlı video konferans.\n💻 Online Kod Editörü: StackBlitz entegrasyonu ile tarayıcıda kod yazma ve çalıştırma.\n💳 Ödeme Sistemi: iyzico entegrasyonu ile güvenli kurs satın alma.\n📚 Kurs Kataloğu: Açık katılımlı kurs listesi ve detay sayfaları.\n⭐ Eğitmen Puanlama: Şeffaf değerlendirme sistemi ile eğitmen kalitesi.\n🔐 Email doğrulama ve şifre sıfırlama akışları.\n🔒 Yetkilendirme kontrolleri ile güvenli erişim.\n📱 Responsive tasarım ile mobil uyumluluk.\n🎨 Bootstrap 5 ile modern ve sade arayüz tasarımı.\n\nTeknoloji ve Mimari:\n- Backend: ASP.NET Core 8.0 (MVC)\n- Veritabanı: Microsoft SQL Server & Entity Framework Core\n- Kimlik Doğrulama: ASP.NET Core Identity\n- Real-time İletişim: Jitsi Meet & SignalR\n- Frontend: Razor Views, Bootstrap 5, jQuery, JavaScript\n- Dosya Yönetimi: Çoklu dosya yükleme ve indirme altyapısı\n- Mimari: MVC katmanlı yapı, role-based authorization, Docker ile containerization",
       screenshots: [
-        { image: require("./assets/images/eduhub-homepage.png"), name: "Ana Sayfa" },
-        { image: require("./assets/images/eduhub-dashboard.png"), name: "Kontrol Paneli" },
-        { image: require("./assets/images/eduhub-course-detail.png"), name: "Kurs Detayı" },
-        { image: require("./assets/images/eduhub-live-lesson.png"), name: "Canlı Ders" }
+        {
+          image: require("./assets/images/eduhub-homepage.png"),
+          name: "Ana Sayfa"
+        },
+        {
+          image: require("./assets/images/eduhub-dashboard.png"),
+          name: "Kontrol Paneli"
+        },
+        {
+          image: require("./assets/images/eduhub-course-detail.png"),
+          name: "Kurs Detayı"
+        },
+        {
+          image: require("./assets/images/eduhub-live-lesson.png"),
+          name: "Canlı Ders"
+        }
       ],
       footerLink: [
-        { name: "GitHub", url: "https://github.com/ibrahimyagar/EduHub" },
-        { name: "Canlı Demo", url: "" }
+        {name: "GitHub", url: "https://github.com/ibrahimyagar/EduHub"},
+        {name: "Canlı Demo", url: ""}
       ]
     },
     {
       image: require("./assets/images/kutuphane-logo.png"),
       projectName: "Kütüphane Yönetim Sistemi",
-      projectDesc: "ASP.NET Core MVC ile geliştirilmiş profesyonel kütüphane yönetim sistemi",
+      projectDesc:
+        "ASP.NET Core MVC ile geliştirilmiş profesyonel kütüphane yönetim sistemi",
       technologies: [
         "ASP.NET Core MVC",
         ".NET 7.0",
@@ -325,22 +339,39 @@ const bigProjects = {
         "jQuery",
         "Razor Pages"
       ],
-      detailedDesc: "ASP.NET Core MVC ile geliştirilmiş profesyonel bir kütüphane yönetim sistemidir. Bu sistem, kütüphanelerin kitap envanterini, kullanıcı işlemlerini ve kiralama süreçlerini dijitalleştirmek için tasarlanmıştır.\n\nTemel Özellikler:\n\nKitap Yönetimi: Kitap ekleme, güncelleme ve silme işlemleri, kitap bilgileri (ad, yazar, fiyat, tanım), kitap görsel yükleme desteği, kitap türüne göre kategorilendirme\n\nKitap Türü Yönetimi: Kitap türü ekleme ve düzenleme, kitap türü listeleme ve silme, kategorilere göre filtreleme\n\nKiralama İşlemleri: Kitap kiralama kayıtları, öğrenci-kitap eşleştirmesi, kiralama geçmişi takibi\n\nGüvenlik ve Yetkilendirme: ASP.NET Core Identity ile kullanıcı yönetimi, rol tabanlı yetkilendirme (Admin, Öğrenci), güvenli oturum yönetimi",
+      detailedDesc:
+        "ASP.NET Core MVC ile geliştirilmiş profesyonel bir kütüphane yönetim sistemidir. Bu sistem, kütüphanelerin kitap envanterini, kullanıcı işlemlerini ve kiralama süreçlerini dijitalleştirmek için tasarlanmıştır.\n\nTemel Özellikler:\n\nKitap Yönetimi: Kitap ekleme, güncelleme ve silme işlemleri, kitap bilgileri (ad, yazar, fiyat, tanım), kitap görsel yükleme desteği, kitap türüne göre kategorilendirme\n\nKitap Türü Yönetimi: Kitap türü ekleme ve düzenleme, kitap türü listeleme ve silme, kategorilere göre filtreleme\n\nKiralama İşlemleri: Kitap kiralama kayıtları, öğrenci-kitap eşleştirmesi, kiralama geçmişi takibi\n\nGüvenlik ve Yetkilendirme: ASP.NET Core Identity ile kullanıcı yönetimi, rol tabanlı yetkilendirme (Admin, Öğrenci), güvenli oturum yönetimi",
       screenshots: [
-        { image: require("./assets/images/library-kitaplar.png"), name: "Kitaplar" },
-        { image: require("./assets/images/library-kitap-turleri.png"), name: "Kitap Türleri" },
-        { image: require("./assets/images/library-kitap-ekle.png"), name: "Kitap Ekle" },
-        { image: require("./assets/images/library-kitap-kirala.png"), name: "Kitap Kirala" }
+        {
+          image: require("./assets/images/library-kitaplar.png"),
+          name: "Kitaplar"
+        },
+        {
+          image: require("./assets/images/library-kitap-turleri.png"),
+          name: "Kitap Türleri"
+        },
+        {
+          image: require("./assets/images/library-kitap-ekle.png"),
+          name: "Kitap Ekle"
+        },
+        {
+          image: require("./assets/images/library-kitap-kirala.png"),
+          name: "Kitap Kirala"
+        }
       ],
       footerLink: [
-        { name: "GitHub", url: "https://github.com/ibrahimyagar/Kutuphane-Sistemi" },
-        { name: "Canlı Demo", url: "" }
+        {
+          name: "GitHub",
+          url: "https://github.com/ibrahimyagar/Kutuphane-Sistemi"
+        },
+        {name: "Canlı Demo", url: ""}
       ]
     },
     {
       image: require("./assets/images/teachflow-logo.png"),
       projectName: "TeachFlow",
-      projectDesc: "Öğretmenler ve öğrenciler için geliştirilmiş modern bir sınıf yönetim sistemi",
+      projectDesc:
+        "Öğretmenler ve öğrenciler için geliştirilmiş modern bir sınıf yönetim sistemi",
       technologies: [
         "ASP.NET Core MVC",
         ".NET 8.0",
@@ -350,16 +381,23 @@ const bigProjects = {
         "Bootstrap",
         "jQuery"
       ],
-      detailedDesc: "TeachFlow, öğretmenler ve öğrenciler için geliştirilmiş modern bir sınıf yönetim sistemidir. Bu platform, sınıf oluşturma, ödev yönetimi, duyuru sistemi ve öğrenci takibi gibi özellikler sunar.\n\nÖzellikler:\n\nSınıf Yönetimi:\nSınıf oluşturma ve benzersiz kod ile paylaşım\nSınıfa katılma (kod ile)\nSınıf arşivleme ve geri alma\nÖğretmen/Öğrenci rol yönetimi\n\nÖdev Yönetimi:\nÖdev oluşturma ve teslim tarihi belirleme\nÖdev gönderme ve puanlama sistemi\nÖdev listesi görüntüleme\nTeslim tarihi kontrolü\n\nDuyuru Sistemi:\nDuyuru ekleme ve yönetme\nDuyurulara yorum yapma\nDuyuru silme\n\nKullanıcı Yönetimi:\nASP.NET Core Identity ile kimlik doğrulama\nÖğrenci-Öğretmen rol ayrımı\nSınıf üyeleri yönetimi",
+      detailedDesc:
+        "TeachFlow, öğretmenler ve öğrenciler için geliştirilmiş modern bir sınıf yönetim sistemidir. Bu platform, sınıf oluşturma, ödev yönetimi, duyuru sistemi ve öğrenci takibi gibi özellikler sunar.\n\nÖzellikler:\n\nSınıf Yönetimi:\nSınıf oluşturma ve benzersiz kod ile paylaşım\nSınıfa katılma (kod ile)\nSınıf arşivleme ve geri alma\nÖğretmen/Öğrenci rol yönetimi\n\nÖdev Yönetimi:\nÖdev oluşturma ve teslim tarihi belirleme\nÖdev gönderme ve puanlama sistemi\nÖdev listesi görüntüleme\nTeslim tarihi kontrolü\n\nDuyuru Sistemi:\nDuyuru ekleme ve yönetme\nDuyurulara yorum yapma\nDuyuru silme\n\nKullanıcı Yönetimi:\nASP.NET Core Identity ile kimlik doğrulama\nÖğrenci-Öğretmen rol ayrımı\nSınıf üyeleri yönetimi",
       screenshots: [
-        { image: require("./assets/images/teachflow-anasayfa.png"), name: "Ana Sayfa" },
-        { image: require("./assets/images/teachflow-login.png"), name: "Giriş" },
-        { image: require("./assets/images/teachflow-dashboard.png"), name: "Kontrol Paneli" },
-        { image: require("./assets/images/teachflow-panel.png"), name: "Panel" }
+        {
+          image: require("./assets/images/teachflow-anasayfa.png"),
+          name: "Ana Sayfa"
+        },
+        {image: require("./assets/images/teachflow-login.png"), name: "Giriş"},
+        {
+          image: require("./assets/images/teachflow-dashboard.png"),
+          name: "Kontrol Paneli"
+        },
+        {image: require("./assets/images/teachflow-panel.png"), name: "Panel"}
       ],
       footerLink: [
-        { name: "GitHub", url: "https://github.com/ibrahimyagar/TeachFlow" },
-        { name: "Canlı Demo", url: "" }
+        {name: "GitHub", url: "https://github.com/ibrahimyagar/TeachFlow"},
+        {name: "Canlı Demo", url: ""}
       ]
     }
   ],
@@ -391,9 +429,7 @@ const achievementSection = {
         "960 saati aşkın yoğun eğitim sürecinde, 75 farklı proje ve 24 değerlendirme ile 10 ay boyunca hem frontend hem de backend alanında sağlam bir temel kazandım. Web & Temeller: HTML, CSS, JavaScript. Web Uygulama Geliştirme: React, Cypress.io. İleri Web Geliştirme: Redux, TanStack Query, TailwindCSS, OpenAI. Back-end: Java, Spring Boot, PostgreSQL, Hibernate.",
       image: require("./assets/images/workintech.jpeg"),
       imageAlt: "Bootcamp Logo",
-      footerLink: [
-        {name: "Sertifika", url: ""}
-      ]
+      footerLink: [{name: "Sertifika", url: ""}]
     },
     {
       title: "Web Programlama Kursu",
@@ -401,9 +437,7 @@ const achievementSection = {
         "Tarih: Haz 2023. Arnavutköy Bilişim Akademisi'nde web programlama temelleri ve modern web geliştirme teknolojileri üzerine kapsamlı bir eğitim aldım. Temel Web Teknolojileri: HTML5, CSS3, JavaScript. Web Geliştirme: Responsive Tasarım, Bootstrap, DOM Manipülasyonu. Proje Yönetimi: Git, GitHub, Proje Geliştirme Süreçleri.",
       image: require("./assets/images/arnavutkoy-bilisim-akademisi.png"),
       imageAlt: "Web Programming Logo",
-      footerLink: [
-        {name: "Sertifika", url: ""}
-      ]
+      footerLink: [{name: "Sertifika", url: ""}]
     },
 
     {
@@ -412,9 +446,7 @@ const achievementSection = {
         "Tarih: Haz 2023. Arnavutköy Bilişim Akademisi'nde NFT tasarımı, blockchain teknolojisi ve metaverse dünyası hakkında kapsamlı bir eğitim aldım. NFT Tasarımı: Dijital Sanat, Koleksiyon Tasarımı, NFT Pazaryerleri. Blockchain Teknolojisi: Blockchain Temelleri, Akıllı Kontratlar, Kripto Para Birimleri. Metaverse: Sanal Dünya Platformları, 3D Tasarım, VR/AR Teknolojileri.",
       image: require("./assets/images/arnavutkoy-bilisim-akademisi.png"),
       imageAlt: "NFT and Metaverse Logo",
-      footerLink: [
-        {name: "Sertifika", url: ""}
-      ]
+      footerLink: [{name: "Sertifika", url: ""}]
     },
     {
       title: "Bilgisayar ve Yabancı Dil Sertifikası",
@@ -422,9 +454,7 @@ const achievementSection = {
         "Tarih: Nis 2017. Özçaba Bilgisayar ve Yabancı Dil Kursu'nda temel bilgisayar becerileri ve yabancı dil eğitimi aldım. Bilgisayar Becerileri: Microsoft Office, Windows İşletim Sistemi, Temel Bilgisayar Kullanımı. Yabancı Dil: İngilizce Dil Eğitimi, Okuma, Yazma, Konuşma Becerileri.",
       image: require("./assets/images/ozcaba-logo.png"),
       imageAlt: "Computer and Language Certificate",
-      footerLink: [
-        {name: "Sertifika", url: ""}
-      ]
+      footerLink: [{name: "Sertifika", url: ""}]
     }
   ],
   display: true // Set false to hide this section, defaults to true

@@ -23,7 +23,10 @@ export default function Footer() {
             {/* Alt - Copyright */}
             <div className="footer-bottom-row">
               <div className="footer-copyright">
-                <p>© {new Date().getFullYear()} İbrahim Yağar. Tüm Hakları Saklıdır.</p>
+                <p>
+                  © {new Date().getFullYear()} İbrahim Yağar. Tüm Hakları
+                  Saklıdır.
+                </p>
               </div>
             </div>
           </div>

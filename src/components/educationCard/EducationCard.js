@@ -1,4 +1,10 @@
-import React, {createRef, useContext, useState, useEffect, useRef as useReactRef} from "react";
+import React, {
+  createRef,
+  useContext,
+  useState,
+  useEffect,
+  useRef as useReactRef
+} from "react";
 import {Fade, Slide} from "react-reveal";
 import "./EducationCard.scss";
 import StyleContext from "../../contexts/StyleContext";
@@ -10,16 +16,16 @@ export default function EducationCard({school}) {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             // Her görünür olduğunda animasyonu yeniden tetikle
-            setAnimationKey((prev) => prev + 1);
+            setAnimationKey(prev => prev + 1);
           }
         });
       },
       {
-        threshold: 0.1,
+        threshold: 0.1
       }
     );
 

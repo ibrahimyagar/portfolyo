@@ -84,7 +84,8 @@
 }
 
 @keyframes buttonPulse {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 2px 8px rgba(76, 29, 149, 0.1);
   }
   50% {
@@ -97,7 +98,8 @@
 }
 
 @keyframes buttonPulseDark {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 2px 8px rgba(196, 181, 253, 0.2);
   }
   50% {
@@ -216,7 +218,7 @@
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
