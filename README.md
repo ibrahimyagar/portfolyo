@@ -1,32 +1,37 @@
-# İbrahim Yağar Portfolio
+# İbrahim Yağar — Portföy
 
-Bu depo, İbrahim Yağar'ın kişisel portföy sitesinin kaynak kodlarını içerir. Proje React tabanlıdır ve özgeçmiş, projeler, sertifikalar gibi bölümleri dinamik olarak `src/portfolio.js` dosyasından yönetir.
+Kişisel portföy sitesinin kaynak kodu. Canlı: [ibrahimyagar.com](https://www.ibrahimyagar.com/)
 
-## Başlarken
+React ile geliştirilmiştir. Özgeçmiş, projeler, eğitim ve sertifika içerikleri `src/portfolio.js` üzerinden yönetilir.
+
+## Çalıştırma
 
 ```bash
 npm install
 npm start
 ```
 
-- `npm start` komutu yerel geliştirme sunucusunu `http://localhost:3000` adresinde başlatır.
-- `npm run build` komutu üretim için optimizasyonlu derleme oluşturur.
+| Komut | Açıklama |
+|-------|---------|
+| `npm start` | Geliştirme sunucusu (`http://localhost:3000`) |
+| `npm run build` | Üretim derlemesi |
 
 ## Yapı
 
-- `src/portfolio.js`: Tüm içerik verileri burada tanımlanır.
-- `public/`: Meta etiketleri, manifest ve statik dosyalar.
-- `src/containers/`: Sayfa bölümlerini oluşturan React bileşenleri.
-- `src/assets/`: Görseller ve animasyonlar.
+- `src/portfolio.js` — site içerik verileri
+- `src/containers/` — sayfa bölümleri
+- `src/components/` — yeniden kullanılan bileşenler
+- `src/assets/` — görseller ve animasyonlar
+- `public/` — statik dosyalar, CV ve meta
 
 ## Dağıtım
 
-Depo GitHub'a push edildikten sonra Netlify ile otomatik olarak dağıtılabilir.
+Site Netlify üzerinde yayınlanır.
 
-1. Netlify hesabında "Add new site" → "Import an existing project" adımları izlenir.
-2. Build komutu `npm run build`, publish klasörü `build` olarak ayarlanır.
-3. `ibrahimyagar.com` alan adı Netlify üzerinden yönlendirilerek ücretsiz SSL sertifikasıyla servise alınabilir.
+- Build: `npm run build`
+- Publish dizini: `build`
+- Domain: `ibrahimyagar.com`
 
 ## Lisans
 
-Bu proje İbrahim Yağar için özelleştirilmiştir. Template olarak DeveloperFolio kullanılmış, fakat içeriği ve yapılandırması kişiselleştirilmiştir.
+Bu depo İbrahim Yağar’ın kişisel portföyü içindir.
