@@ -28,10 +28,17 @@ function Header() {
   const viewTalks = talkSection.display;
   const viewResume = resumeSection.display;
 
+  const closeMobileMenu = () => {
+    const menuBtn = document.getElementById("menu-btn");
+    if (menuBtn && menuBtn.checked) {
+      menuBtn.checked = false;
+    }
+  };
+
   return (
     <Headroom>
       <header className={isDark ? "dark-menu header" : "header"}>
-        <a href="/" className="logo">
+        <a href="/" className="logo" onClick={closeMobileMenu}>
           <span className="grey-color"> &lt;</span>
           <span className="logo-name">{greeting.username}</span>
           <span className="grey-color">/&gt;</span>
@@ -41,53 +48,72 @@ function Header() {
           className="menu-icon"
           htmlFor="menu-btn"
           style={{color: "white"}}
+          aria-label="Menüyü aç/kapat"
         >
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           {viewAbout && (
             <li>
-              <a href="#about">Hakkımda</a>
+              <a href="#about" onClick={closeMobileMenu}>
+                Hakkımda
+              </a>
             </li>
           )}
           {viewSkills && (
             <li>
-              <a href="#skills">Beceriler</a>
+              <a href="#skills" onClick={closeMobileMenu}>
+                Beceriler
+              </a>
             </li>
           )}
           {viewExperience && (
             <li>
-              <a href="#experience">İş Deneyimi</a>
+              <a href="#experience" onClick={closeMobileMenu}>
+                İş Deneyimi
+              </a>
             </li>
           )}
           {viewProjects && (
             <li>
-              <a href="#projects">Projeler</a>
+              <a href="#projects" onClick={closeMobileMenu}>
+                Projeler
+              </a>
             </li>
           )}
           {viewOpenSource && (
             <li>
-              <a href="#opensource">Açık Kaynak</a>
+              <a href="#opensource" onClick={closeMobileMenu}>
+                Açık Kaynak
+              </a>
             </li>
           )}
           {viewAchievement && (
             <li>
-              <a href="#achievements">Sertifikalar</a>
+              <a href="#achievements" onClick={closeMobileMenu}>
+                Sertifikalar
+              </a>
             </li>
           )}
           {viewBlog && (
             <li>
-              <a href="#blogs">Bloglar</a>
+              <a href="#blogs" onClick={closeMobileMenu}>
+                Bloglar
+              </a>
             </li>
           )}
           {viewTalks && (
             <li>
-              <a href="#talks">Konuşmalar</a>
+              <a href="#talks" onClick={closeMobileMenu}>
+                Konuşmalar
+              </a>
             </li>
           )}
           {viewResume && <li></li>}
           <li>
-            <a href="#contact">İletişim</a>
+            <a href="#contact" onClick={closeMobileMenu}>
+              İletişim
+            </a>
           </li>
           <li>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}

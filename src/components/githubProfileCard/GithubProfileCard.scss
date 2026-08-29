@@ -99,7 +99,18 @@
 
   .prof-title {
     padding-bottom: 1rem;
-    font-size: 32px;
+    font-size: clamp(1.75rem, 7vw, 2rem);
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .bio-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .profile-image {
+    max-width: min(220px, 70vw);
   }
 }

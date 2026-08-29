@@ -113,12 +113,23 @@
 @media (max-width: 768px) {
   .education-card {
     text-align: center;
+    padding: 0 0.5rem 1rem;
   }
   .education-card-right {
     max-width: 100%;
   }
   .education-card-border {
     width: 100%;
+  }
+  .education-text-school {
+    height: auto;
+    line-height: 1.35;
+    font-size: 1.15rem;
+  }
+  .education-text-subHeader,
+  .education-text-duration {
+    font-size: 0.95rem;
+    line-height: 1.4;
   }
   .education-roundedimg {
     margin-top: 10px;
@@ -128,7 +139,9 @@
     margin-right: 0;
   }
   .education-text-bullets > ul {
-    max-width: 80%;
+    max-width: 100%;
     margin: auto;
+    padding-left: 1.25rem;
+    text-align: left;
   }
 }

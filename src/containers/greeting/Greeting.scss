@@ -201,7 +201,7 @@
   margin-left: 40px;
 }
 
-.greeting-image-div > img {
+.greeting-image-div > * {
   max-width: 100%;
   height: auto;
 }
@@ -295,29 +295,111 @@
   }
 }
 @media (max-width: 768px) {
-  .button-greeting-div {
-    justify-content: space-around;
+  .greet-main {
+    width: 100%;
+    padding: 0 1.25rem;
+    margin-top: 1rem;
   }
-  .greeting-text {
-    font-size: 30px;
+
+  .main {
+    width: 100%;
+    padding: 16px 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .button-greeting-div {
+    justify-content: center;
+  }
+
+  .greeting-text-div {
+    align-items: center;
     text-align: center;
   }
+
+  .greeting-text {
+    font-size: clamp(1.75rem, 7vw, 1.9rem);
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .greeting-text-p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
   .typewriter-row {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.05rem;
+    line-height: 1.5;
     justify-content: center;
     text-align: center;
+    flex-wrap: wrap;
+    white-space: normal;
+    gap: 0.4rem;
   }
+
+  .typewriter-dynamic {
+    min-width: unset;
+  }
+
   .greeting-main {
     display: block;
   }
+
   .greeting-image-div {
-    height: 256px;
+    height: auto;
+    max-height: 260px;
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+
+  .typewriter-trailing,
+  .greeting-status {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .social-and-button {
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .greeting-primary-button .main-button {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .greet-main {
+    padding: 0 1rem;
+  }
+
+  .main {
+    padding: 12px 1rem;
+  }
+
+  .greeting-text {
+    font-size: 1.55rem;
+  }
+
+  .social-and-button {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .greeting-image-div {
+    max-height: 220px;
   }
 }
 
 @media (max-width: 320px) {
-  .main {
-    width: auto;
+  .main,
+  .greet-main {
+    width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }

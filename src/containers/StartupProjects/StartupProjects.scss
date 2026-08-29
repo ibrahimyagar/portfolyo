@@ -7,12 +7,12 @@
 .card-image {
   max-width: 100%;
   height: auto;
-  width: 250px;
+  width: min(250px, 100%);
   transition: transform 0.4s ease;
 }
 
 .card-image.eduhub-logo {
-  width: 320px;
+  width: min(320px, 100%);
 }
 
 .card-title {
@@ -113,7 +113,7 @@
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -332,6 +332,11 @@
     text-align: center;
   }
 
+  #projects .skills-heading {
+    text-align: center;
+    font-size: clamp(1.75rem, 7vw, 2rem);
+  }
+
   .projects-container {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -342,6 +347,29 @@
   }
 
   .project-image {
-    height: 200px;
+    height: auto;
+    min-height: 160px;
+    max-height: 200px;
+  }
+
+  .detail-btn-text {
+    min-height: 44px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+    line-height: 1.35;
+  }
+
+  .card-subtitle {
+    font-size: 0.95rem;
   }
 }

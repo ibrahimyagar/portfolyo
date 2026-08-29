@@ -55,19 +55,29 @@
 }
 @media (max-width: 768px) {
   .achievement-main-div {
-    margin-top: 50px;
+    margin-top: 2.5rem;
   }
   .achievement-heading {
-    font-size: 30px;
+    font-size: clamp(1.75rem, 7vw, 1.9rem);
     text-align: center;
   }
   .achievement-subtitle {
-    font-size: 16px;
-    line-height: normal;
+    font-size: 1rem;
+    line-height: 1.5;
     text-align: center;
+    margin-bottom: 1.5rem;
   }
   .achievement-cards-div {
     gap: 1rem;
     animation-duration: 25s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .achievement-cards-div {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
   }
 }

@@ -11,8 +11,8 @@
 
 .repo-cards-div-main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 1rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 1rem;
 }
 
 /* Media Query */
@@ -21,12 +21,14 @@
     font-size: 40px;
   }
 }
+
 @media (max-width: 768px) {
   .project-title {
-    font-size: 30px;
+    font-size: clamp(1.75rem, 7vw, 1.9rem);
     text-align: center;
   }
+
   .repo-cards-div-main {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
   }
 }

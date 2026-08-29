@@ -23,8 +23,10 @@
 .header {
   background-color: $lightBackground1;
   max-width: 100%;
-  padding: 15px 20px;
-  margin: 0px auto;
+  width: 100%;
+  padding: 12px 16px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .header ul {
@@ -50,8 +52,10 @@
 }
 
 .header li a {
-  display: block;
-  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 12px 16px;
   color: $textColor;
   text-decoration: none;
 }
@@ -65,12 +69,16 @@
   display: block;
   flex: none;
   float: left;
+  max-width: calc(100% - 72px);
   font-size: 1.5em;
   text-decoration: none;
   margin-top: 10px;
   line-height: normal;
   transition: transform 0.3s ease;
   cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   &:hover {
     transform: translateY(-2px);
@@ -85,6 +93,10 @@
   color: #000000;
   position: relative;
   display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
   transition: all 0.3s ease;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   letter-spacing: 2px;
@@ -148,9 +160,13 @@
 
 .header .menu-icon {
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   float: right;
-  padding: 28px 20px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 12px;
   position: relative;
   user-select: none;
 }
@@ -205,7 +221,8 @@
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 486px;
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -245,6 +262,41 @@
 }
 @media (max-width: 960px) and (min-width: 768px) {
   .header {
-    font-size: 12px;
+    font-size: 13px;
+  }
+
+  .header li a {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 10px 12px;
+  }
+
+  .header .logo {
+    margin-top: 6px;
+    font-size: 1.25em;
+  }
+
+  .header .logo-name,
+  .dark-menu .logo-name {
+    font-size: 0.95em;
+    letter-spacing: 1px;
+    padding: 0 6px;
+  }
+
+  .header .menu {
+    width: 100%;
+  }
+
+  .header li a {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .dark-menu li a {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
   }
 }

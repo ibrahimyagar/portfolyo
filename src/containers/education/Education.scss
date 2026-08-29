@@ -37,14 +37,23 @@
 }
 
 @media (max-width: 768px) {
-  .education-card-container {
-    padding-top: 0px;
+  .education-section {
+    width: 100%;
+    padding: 12px 1rem;
+    margin-top: 1rem;
   }
+
+  .education-card-container {
+    padding-top: 0;
+  }
+
   .education-heading {
-    font-size: 30px;
+    font-size: clamp(1.75rem, 7vw, 1.9rem);
     text-align: center;
   }
+
   .education-text-subtitle {
-    font-size: 16px;
+    font-size: 1rem;
+    text-align: center;
   }
 }
