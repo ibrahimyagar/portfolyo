@@ -1,4 +1,12 @@
-import React, {useContext, useEffect, useMemo, useState} from "react";
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState
+} from "react";
 import ScrollReveal from "../../components/scrollReveal/ScrollReveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
@@ -15,6 +23,64 @@ export default function Greeting() {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+  const typewriterRowRef = useRef(null);
+  const typewriterLineRef = useRef(null);
+
+  const fitTypewriterLine = useCallback(() => {
+    const row = typewriterRowRef.current;
+    const line = typewriterLineRef.current;
+    if (!row || !line) {
+      return;
+    }
+
+    const available = row.clientWidth;
+    if (available <= 0) {
+      return;
+    }
+
+    const longestRole = roles.reduce(
+      (longest, role) => (role.length > longest.length ? role : longest),
+      ""
+    );
+
+    const probe = line.cloneNode(true);
+    probe.style.position = "absolute";
+    probe.style.visibility = "hidden";
+    probe.style.pointerEvents = "none";
+    probe.style.left = "-99999px";
+    probe.style.top = "0";
+    probe.style.whiteSpace = "nowrap";
+    probe.style.fontSize = "16px";
+
+    const probeDynamic = probe.querySelector(".typewriter-dynamic");
+    if (probeDynamic) {
+      probeDynamic.childNodes.forEach(node => {
+        if (node.nodeType === Node.TEXT_NODE) {
+          node.textContent = longestRole;
+        }
+      });
+    }
+
+    row.appendChild(probe);
+
+    let low = 10;
+    let high = 32;
+    let best = low;
+
+    while (low <= high) {
+      const mid = (low + high) / 2;
+      probe.style.fontSize = `${mid}px`;
+      if (probe.scrollWidth <= available) {
+        best = mid;
+        low = mid + 0.25;
+      } else {
+        high = mid - 0.25;
+      }
+    }
+
+    row.removeChild(probe);
+    row.style.fontSize = `${Math.max(10, Math.floor(best * 100) / 100)}px`;
+  }, [roles]);
 
   useEffect(() => {
     const currentWord = roles[currentRoleIndex];
@@ -46,6 +112,38 @@ export default function Greeting() {
     return () => clearTimeout(timeout);
   }, [displayedText, isDeleting, currentRoleIndex, roles]);
 
+  useLayoutEffect(() => {
+    fitTypewriterLine();
+
+    let cancelled = false;
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => {
+        if (!cancelled) {
+          fitTypewriterLine();
+        }
+      });
+    }
+
+    const row = typewriterRowRef.current;
+    if (!row || typeof ResizeObserver === "undefined") {
+      window.addEventListener("resize", fitTypewriterLine);
+      return () => {
+        cancelled = true;
+        window.removeEventListener("resize", fitTypewriterLine);
+      };
+    }
+
+    const observer = new ResizeObserver(() => {
+      fitTypewriterLine();
+    });
+    observer.observe(row);
+
+    return () => {
+      cancelled = true;
+      observer.disconnect();
+    };
+  }, [fitTypewriterLine, isDark]);
+
   if (!greeting.displayGreeting) {
     return null;
   }
@@ -70,11 +168,16 @@ export default function Greeting() {
                 {name}
                 <span className="wave-emoji">{emoji("👋")}</span>
               </h1>
-              <p className={isDark ? "typewriter-row dark" : "typewriter-row"}>
-                Full-stack geliştirici olarak
-                <span className="typewriter-dynamic">
-                  {` ${displayedText}`}
-                  <span className="typewriter-cursor">_</span>
+              <p
+                ref={typewriterRowRef}
+                className={isDark ? "typewriter-row dark" : "typewriter-row"}
+              >
+                <span ref={typewriterLineRef} className="typewriter-line">
+                  Full-stack geliştirici olarak{" "}
+                  <span className="typewriter-dynamic">
+                    {displayedText}
+                    <span className="typewriter-cursor">_</span>
+                  </span>
                 </span>
               </p>
               <p
