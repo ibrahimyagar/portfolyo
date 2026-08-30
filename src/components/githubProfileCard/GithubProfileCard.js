@@ -3,7 +3,7 @@ import "./GithubProfileCard.scss";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import {contactInfo, isHireable} from "../../portfolio";
 import emoji from "react-easy-emoji";
-import {Fade} from "react-reveal";
+import ScrollReveal from "../scrollReveal/ScrollReveal";
 
 export default function GithubProfileCard({prof}) {
   if (isHireable) {
@@ -12,7 +12,7 @@ export default function GithubProfileCard({prof}) {
     prof.hireable = "Hayır";
   }
   return (
-    <Fade bottom duration={1000} distance="20px">
+    <ScrollReveal bottom duration={1000} distance="20px">
       <div className="main" id="contact">
         <h1 className="prof-title">Benimle İletişime Geçin!</h1>
         <div className="row">
@@ -57,6 +57,6 @@ export default function GithubProfileCard({prof}) {
           </div>
         </div>
       </div>
-    </Fade>
+    </ScrollReveal>
   );
 }

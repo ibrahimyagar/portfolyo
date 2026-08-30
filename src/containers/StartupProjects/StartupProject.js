@@ -1,7 +1,7 @@
 import React, {useContext, useState} from "react";
 import "./StartupProjects.scss";
 import {bigProjects} from "../../portfolio";
-import {Fade} from "react-reveal";
+import ScrollReveal from "../../components/scrollReveal/ScrollReveal";
 import StyleContext from "../../contexts/StyleContext";
 import ProjectModal from "../../components/projectModal/ProjectModal";
 
@@ -72,7 +72,7 @@ export default function StartupProject() {
   };
 
   return (
-    <Fade bottom duration={1000} distance="20px">
+    <ScrollReveal bottom duration={1000} distance="20px">
       <div className="main" id="projects">
         <div>
           <h1 className="skills-heading">{bigProjects.title}</h1>
@@ -91,7 +91,7 @@ export default function StartupProject() {
           <div className="projects-container">
             {bigProjects.projects.map((project, i) => {
               return (
-                <Fade
+                <ScrollReveal
                   key={i}
                   bottom
                   duration={500}
@@ -179,7 +179,7 @@ export default function StartupProject() {
                       </div>
                     </div>
                   </div>
-                </Fade>
+                </ScrollReveal>
               );
             })}
           </div>
@@ -192,6 +192,6 @@ export default function StartupProject() {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
-    </Fade>
+    </ScrollReveal>
   );
 }

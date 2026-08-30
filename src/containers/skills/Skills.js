@@ -1,52 +1,19 @@
-import React, {useContext, useState, useEffect, useRef} from "react";
+import React, {useContext} from "react";
 import "./Skills.scss";
 import {skillsSection} from "../../portfolio";
-import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import ScrollReveal from "../../components/scrollReveal/ScrollReveal";
 
 export default function Skills() {
   const {isDark} = useContext(StyleContext);
-  const [animationKey, setAnimationKey] = useState(0);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observedSection = sectionRef.current;
-    if (!observedSection) {
-      return undefined;
-    }
-
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setAnimationKey(prev => prev + 1);
-          }
-        });
-      },
-      {
-        threshold: 0.1
-      }
-    );
-
-    observer.observe(observedSection);
-
-    return () => {
-      observer.unobserve(observedSection);
-      observer.disconnect();
-    };
-  }, [sectionRef]);
 
   if (!skillsSection.display) {
     return null;
   }
   return (
-    <div
-      className={isDark ? "dark-mode main" : "main"}
-      id="skills"
-      ref={sectionRef}
-    >
+    <div className={isDark ? "dark-mode main" : "main"} id="skills">
       <div className="skills-main-div">
-        <Fade key={`main-${animationKey}`} bottom duration={1000}>
+        <ScrollReveal bottom duration={1000}>
           <div className="skills-text-div">
             <h1
               className={isDark ? "dark-mode skills-heading" : "skills-heading"}
@@ -55,8 +22,8 @@ export default function Skills() {
             </h1>
             <div className="categorized-skills-container">
               {skillsSection.categorizedSkills.map((category, catIndex) => (
-                <Fade
-                  key={`category-${catIndex}-${animationKey}`}
+                <ScrollReveal
+                  key={`category-${catIndex}`}
                   left
                   delay={catIndex * 200}
                   duration={800}
@@ -75,11 +42,11 @@ export default function Skills() {
                       ))}
                     </div>
                   </div>
-                </Fade>
+                </ScrollReveal>
               ))}
             </div>
           </div>
-        </Fade>
+        </ScrollReveal>
       </div>
     </div>
   );

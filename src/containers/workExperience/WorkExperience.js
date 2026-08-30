@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import "./WorkExperience.scss";
 import ExperienceCard from "../../components/experienceCard/ExperienceCard";
 import {workExperiences} from "../../portfolio";
-import {Fade} from "react-reveal";
+import ScrollReveal from "../../components/scrollReveal/ScrollReveal";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function WorkExperience() {
@@ -10,7 +10,7 @@ export default function WorkExperience() {
   if (workExperiences.display) {
     return (
       <div id="experience">
-        <Fade bottom duration={1000} distance="20px">
+        <ScrollReveal bottom duration={1000} distance="20px">
           <div className="experience-container" id="workExperience">
             <div>
               <h1 className="experience-heading">İş Deneyimi</h1>
@@ -34,7 +34,7 @@ export default function WorkExperience() {
               </div>
             </div>
           </div>
-        </Fade>
+        </ScrollReveal>
       </div>
     );
   }

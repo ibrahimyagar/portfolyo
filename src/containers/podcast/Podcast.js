@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import "./Podcast.scss";
 import {podcastSection} from "../../portfolio";
-import {Fade} from "react-reveal";
+import ScrollReveal from "../../components/scrollReveal/ScrollReveal";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Podcast() {
@@ -14,7 +14,7 @@ export default function Podcast() {
     return null;
   }
   return (
-    <Fade bottom duration={1000} distance="20px">
+    <ScrollReveal bottom duration={1000} distance="20px">
       <div className="main">
         <div className="podcast-header">
           <h1 className="podcast-header-title">{podcastSection.title}</h1>
@@ -49,6 +49,6 @@ export default function Podcast() {
           })}
         </div>
       </div>
-    </Fade>
+    </ScrollReveal>
   );
 }

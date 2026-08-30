@@ -1,12 +1,12 @@
 import React, {useContext} from "react";
 import "./Footer.scss";
-import {Fade} from "react-reveal";
+import ScrollReveal from "../scrollReveal/ScrollReveal";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Footer() {
   const {isDark} = useContext(StyleContext);
   return (
-    <Fade bottom duration={1000} distance="5px">
+    <ScrollReveal bottom duration={1000} distance="5px">
       <footer className={`footer-main ${isDark ? "dark-mode" : ""}`}>
         {/* Alt Bölüm - Beyaz */}
         <div className="footer-bottom">
@@ -32,6 +32,6 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-    </Fade>
+    </ScrollReveal>
   );
 }

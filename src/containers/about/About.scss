@@ -198,6 +198,17 @@
   }
 }
 
+@keyframes about-fade-up-soft {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .about-section.dark-mode {
   background: transparent;
 
@@ -248,9 +259,9 @@
 
     .about-text {
       align-items: center;
-      opacity: 1;
-      transform: none;
-      animation: none;
+      /* Soft vertical entrance instead of side slide on narrow screens */
+      opacity: 0;
+      transform: translateY(14px);
     }
 
     .about-title {
@@ -269,9 +280,8 @@
       justify-content: center;
       padding-left: 0;
       margin-top: 1.5rem;
-      opacity: 1;
-      transform: none;
-      animation: none;
+      opacity: 0;
+      transform: translateY(14px);
     }
 
     .download-group {
@@ -282,9 +292,22 @@
     .about-visual {
       justify-content: center;
       min-height: auto;
-      opacity: 1;
-      transform: none;
-      animation: none;
+      opacity: 0;
+      transform: translateY(14px);
+    }
+  }
+
+  .about-section.about-animate {
+    .about-text {
+      animation: about-fade-up-soft 0.55s ease forwards;
+    }
+
+    .about-visual {
+      animation: about-fade-up-soft 0.55s ease 0.08s forwards;
+    }
+
+    .about-downloads {
+      animation: about-fade-up-soft 0.55s ease 0.16s forwards;
     }
   }
 }

@@ -1,45 +1,11 @@
-import React, {
-  createRef,
-  useContext,
-  useState,
-  useEffect,
-  useRef as useReactRef
-} from "react";
-import {Fade, Slide} from "react-reveal";
+import React, {createRef, useContext} from "react";
 import "./EducationCard.scss";
 import StyleContext from "../../contexts/StyleContext";
+import ScrollReveal from "../scrollReveal/ScrollReveal";
 
 export default function EducationCard({school}) {
   const imgRef = createRef();
-  const cardRef = useReactRef(null);
-  const [animationKey, setAnimationKey] = useState(0);
-
-  useEffect(() => {
-    const observedNode = cardRef.current;
-    if (!observedNode) {
-      return undefined;
-    }
-
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setAnimationKey(prev => prev + 1);
-          }
-        });
-      },
-      {
-        threshold: 0.1
-      }
-    );
-
-    observer.observe(observedNode);
-
-    return () => {
-      observer.unobserve(observedNode);
-      observer.disconnect();
-    };
-  }, [cardRef]);
+  const {isDark} = useContext(StyleContext);
 
   const GetDescBullets = ({descBullets}) => {
     return descBullets
@@ -50,13 +16,12 @@ export default function EducationCard({school}) {
         ))
       : null;
   };
-  const {isDark} = useContext(StyleContext);
 
   if (!school.logo)
     console.error(`Image of ${school.name} is missing in education section`);
   return (
-    <div ref={cardRef}>
-      <Fade key={`fade-${animationKey}`} left duration={1000}>
+    <div>
+      <ScrollReveal left duration={1000}>
         <div className="education-card">
           {school.logo && (
             <div className="education-card-left">
@@ -98,10 +63,10 @@ export default function EducationCard({school}) {
             </div>
           </div>
         </div>
-      </Fade>
-      <Slide key={`slide-${animationKey}`} left duration={2000}>
+      </ScrollReveal>
+      <ScrollReveal effect="slide" left duration={2000}>
         <div className="education-card-border"></div>
-      </Slide>
+      </ScrollReveal>
     </div>
   );
 }

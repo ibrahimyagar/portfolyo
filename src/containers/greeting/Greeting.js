@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useMemo, useState} from "react";
-import {Fade} from "react-reveal";
+import ScrollReveal from "../../components/scrollReveal/ScrollReveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
 import coderAnimation from "../../assets/lottie/coder";
@@ -57,7 +57,7 @@ export default function Greeting() {
     : rawTitle;
 
   return (
-    <Fade bottom duration={1000} distance="40px">
+    <ScrollReveal bottom duration={1000} distance="40px">
       <div className="greet-main" id="greeting">
         <div className="greeting-main">
           <div className="greeting-text-div">
@@ -121,6 +121,6 @@ export default function Greeting() {
           </div>
         </div>
       </div>
-    </Fade>
+    </ScrollReveal>
   );
 }

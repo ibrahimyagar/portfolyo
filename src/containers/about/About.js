@@ -14,21 +14,20 @@ export default function About() {
       return undefined;
     }
 
-    const handleEntries = entries => {
-      entries.forEach(entry => {
-        if (entry.target === section) {
-          if (entry.isIntersecting) {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.target === section && entry.isIntersecting) {
             section.classList.add("about-animate");
-          } else {
-            section.classList.remove("about-animate");
+            observer.disconnect();
           }
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(handleEntries, {
-      threshold: 0.35
-    });
+        });
+      },
+      {
+        threshold: 0.2,
+        rootMargin: "0px 0px -8% 0px"
+      }
+    );
 
     observer.observe(section);
 

@@ -1,6 +1,6 @@
 import React from "react";
 import "./GithubRepoCard.scss";
-import {Fade} from "react-reveal";
+import ScrollReveal from "../scrollReveal/ScrollReveal";
 import {formatFileSizeDisplay} from "../../utils";
 
 export default function GithubRepoCard({repo, isDark}) {
@@ -14,7 +14,7 @@ export default function GithubRepoCard({repo, isDark}) {
   }
 
   return (
-    <Fade bottom duration={1000} distance="20px">
+    <ScrollReveal bottom duration={1000} distance="20px">
       <div>
         <div
           className={isDark ? "dark-card-mode repo-card-div" : "repo-card-div"}
@@ -90,6 +90,6 @@ export default function GithubRepoCard({repo, isDark}) {
           </div>
         </div>
       </div>
-    </Fade>
+    </ScrollReveal>
   );
 }
