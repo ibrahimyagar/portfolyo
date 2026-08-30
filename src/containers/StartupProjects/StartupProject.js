@@ -53,7 +53,13 @@ export default function StartupProject() {
       "Node.js": "fab fa-node-js",
       "Jitsi Meet": "fas fa-video",
       StackBlitz: "fas fa-code",
-      iyzico: "fas fa-credit-card"
+      iyzico: "fas fa-credit-card",
+      "ASP.NET Core 8": "fab fa-microsoft",
+      ".NET 8": "fab fa-microsoft",
+      "React 19": "fab fa-react",
+      TypeScript: "fab fa-js",
+      Vite: "fas fa-bolt",
+      Docker: "fab fa-docker"
     };
 
     // Try to find exact match first

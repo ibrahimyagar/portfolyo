@@ -396,6 +396,57 @@ const bigProjects = {
         {name: "GitHub", url: "https://github.com/ibrahimyagar/TeachFlow"},
         {name: "Canlı Demo", url: ""}
       ]
+    },
+    {
+      image: require("./assets/images/arnavutkoy-showcase.png"),
+      projectName: "Arnavutköy Dijital Hizmetler",
+      projectDesc:
+        "Vatandaş portalı, e-belediye, ulaşım ve personel ekranlarını birleştiren dijital hizmetler platformu",
+      technologies: [
+        "ASP.NET Core 8",
+        ".NET 8",
+        "PostgreSQL",
+        "Entity Framework Core",
+        "React 19",
+        "TypeScript",
+        "Vite",
+        "Docker",
+        "JWT"
+      ],
+      detailedDesc:
+        "Kamu dijital hizmet akışlarını modelleyen monorepo: vatandaş portalı, e-belediye modülleri, ulaşım bilgi sistemi ve personel operasyon ekranları. Clean Architecture + CQRS ile .NET 8 API ve React 19 SPA.\n\nTemel Özellikler:\n✅ Kimlik ve hesap: Kayıt, e-posta doğrulama, JWT access/refresh, şifre sıfırlama\n✅ E-hizmetler: Borç sorgulama/ödeme, belge başvurusu, randevu, talep/öneri\n✅ Ulaşım: Hat kataloğu, güzergâh/sefer, harita, ulaşım kartı\n✅ Kurumsal içerik: Haber, duyuru, etkinlik, birim dizini\n✅ Personel panelleri: Görevli ve yönetici operasyon ekranları\n\nTeknoloji ve Mimari:\n- Backend: ASP.NET Core 8, Clean Architecture, CQRS (MediatR)\n- Veri: EF Core 8 + PostgreSQL\n- Frontend: Vite, React 19, TypeScript\n- Dağıtım: Docker Compose, Cloudflare Pages + Render",
+      screenshots: [
+        {
+          image: require("./assets/images/arnavutkoy-ana-sayfa.png"),
+          name: "Ana Sayfa"
+        },
+        {
+          image: require("./assets/images/arnavutkoy-giris.png"),
+          name: "Giriş"
+        },
+        {
+          image: require("./assets/images/arnavutkoy-e-belediye.png"),
+          name: "E-Belediye"
+        },
+        {
+          image: require("./assets/images/arnavutkoy-panel.png"),
+          name: "Vatandaş Paneli"
+        },
+        {
+          image: require("./assets/images/arnavutkoy-ulasim.png"),
+          name: "Ulaşım Ağı"
+        }
+      ],
+      footerLink: [
+        {
+          name: "GitHub",
+          url: "https://github.com/ibrahimyagar/arnavutkoy-digital-services-platform"
+        },
+        {
+          name: "Canlı Demo",
+          url: "https://arnavutkoydijitalhizmetler.com.tr"
+        }
+      ]
     }
   ],
   display: true
