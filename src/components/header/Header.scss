@@ -1,0 +1,302 @@
+@import "../../_globalColor";
+
+/*React-headroom*/
+.headroom-wrapper {
+  max-height: 100px;
+}
+
+/* header */
+
+.dark-menu {
+  background-color: $darkBackground !important;
+  color: $textColorDark;
+}
+
+.dark-menu li a {
+  color: $textColorDark !important;
+}
+
+.dark-menu li a:hover {
+  background-color: $buttonColor !important;
+}
+
+.header {
+  background-color: $lightBackground1;
+  max-width: 100%;
+  width: 100%;
+  padding: 12px 16px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.grey-color {
+  color: $subTitle;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.header .logo:hover .grey-color {
+  color: #667eea;
+  transform: scale(1.1);
+}
+
+.dark-menu .logo:hover .grey-color {
+  color: #a78bfa;
+}
+
+.header li a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 12px 16px;
+  color: $textColor;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: $headerHoverBG;
+}
+
+.header .logo {
+  display: block;
+  flex: none;
+  float: left;
+  max-width: calc(100% - 72px);
+  font-size: 1.5em;
+  text-decoration: none;
+  margin-top: 10px;
+  line-height: normal;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.header .logo-name {
+  font-family: "JetBrains Mono", "Consolas", "Fira Code", "Source Code Pro",
+    monospace;
+  font-weight: 700;
+  padding: 0 10px;
+  color: #000000;
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  font-size: 1.1em;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #000000, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.dark-menu .logo-name {
+  font-family: "JetBrains Mono", "Consolas", "Fira Code", "Source Code Pro",
+    monospace;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 2px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  font-size: 1.1em;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
+}
+
+.dark-menu .logo-name::after {
+  background: linear-gradient(90deg, transparent, #a78bfa, transparent);
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 12px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: $iconBackground;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon-dark {
+  background: $textColorDark;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: $iconBackground;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon-dark:before,
+.header .menu-icon .navicon-dark:after {
+  background: $textColorDark !important;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent !important;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header .menu {
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+@media (max-width: 960px) and (min-width: 768px) {
+  .header {
+    font-size: 13px;
+  }
+
+  .header li a {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 10px 12px;
+  }
+
+  .header .logo {
+    margin-top: 6px;
+    font-size: 1.25em;
+  }
+
+  .header .logo-name,
+  .dark-menu .logo-name {
+    font-size: 0.95em;
+    letter-spacing: 1px;
+    padding: 0 6px;
+  }
+
+  .header .menu {
+    width: 100%;
+  }
+
+  .header li a {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .dark-menu li a {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+  }
+}

@@ -1,0 +1,37 @@
+@import "../../_globalColor";
+
+#topButton {
+  visibility: hidden;
+  position: fixed;
+  bottom: max(16px, env(safe-area-inset-bottom));
+  right: max(16px, env(safe-area-inset-right));
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: $buttonColor;
+  color: white;
+  cursor: pointer;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 12px;
+  border-radius: 15px;
+  font-size: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#topButton:hover {
+  background-color: $topButtonHover;
+  transition: all ease-in-out 0.2s;
+}
+
+@media (max-width: 480px) {
+  #topButton {
+    bottom: 12px;
+    right: 12px;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 18px;
+  }
+}

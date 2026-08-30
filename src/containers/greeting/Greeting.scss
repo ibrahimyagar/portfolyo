@@ -1,0 +1,453 @@
+@import "../../_globalColor";
+
+.main {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 4rem;
+}
+.greet-main {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 2rem;
+}
+
+.greeting-main {
+  display: flex;
+}
+
+.subTitle {
+  color: $subTitle !important;
+}
+
+.greeting-main {
+  display: flex;
+}
+
+.greeting-main > * {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.empty-div {
+  margin-bottom: 40px;
+}
+
+.button-greeting-div {
+  margin-top: 24px;
+}
+.download-link-button {
+  text-decoration: none;
+}
+
+.greeting-primary-button .main-button {
+  background: rgba(197, 173, 255, 0.6);
+  border: none;
+  color: #1f1f3d;
+  padding: 14px 28px;
+  border-radius: 18px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: 0 18px 35px rgba(168, 128, 255, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  backdrop-filter: blur(4px);
+  position: relative;
+  overflow: hidden;
+}
+
+.greeting-primary-button .main-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(124, 58, 237, 0.18);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.greeting-primary-button .main-button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 26px 48px rgba(124, 58, 237, 0.35);
+  background: rgba(197, 173, 255, 0.72);
+}
+
+.greeting-primary-button .main-button:hover::before {
+  width: 320px;
+  height: 320px;
+}
+
+.greeting-primary-button .main-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 32px rgba(124, 58, 237, 0.3);
+}
+
+.cta-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-arrow {
+  font-size: 1.2rem;
+  color: #5c2dd4;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.greeting-primary-button .main-button:hover .cta-arrow {
+  animation: greeting-arrow-move 0.9s ease-in-out infinite;
+}
+
+@keyframes greeting-arrow-move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.dark-mode .greeting-primary-button .main-button {
+  background: rgba(197, 173, 255, 0.6);
+  color: #1f1f3d;
+  box-shadow: 0 18px 35px rgba(168, 128, 255, 0.35);
+}
+
+.dark-mode .greeting-primary-button .main-button:hover {
+  box-shadow: 0 26px 48px rgba(168, 128, 255, 0.45);
+  background: rgba(197, 173, 255, 0.78);
+}
+
+.greeting-text {
+  font-size: 70px;
+  line-height: 1.1;
+  color: $textColor !important;
+}
+
+.dark-mode.greeting-text {
+  color: $textColorDark !important;
+}
+
+.greeting-text-p {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.typewriter-row {
+  font-size: 32px;
+  line-height: 36px;
+  color: #4f5665;
+  margin-top: 1.2rem;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typewriter-line {
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.typewriter-dynamic {
+  font-weight: 700;
+  display: inline;
+  white-space: nowrap;
+  background: linear-gradient(90deg, #a78bfa 0%, #8b5cf6 50%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.typewriter-row.dark .typewriter-dynamic {
+  background: linear-gradient(90deg, #c4b5fd 0%, #a78bfa 50%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.typewriter-static {
+  color: inherit;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 4px;
+  color: #9aa0b5;
+  animation: typewriter-blink 1s steps(2, start) infinite;
+}
+
+@keyframes typewriter-blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+.greeting-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+  overflow: hidden;
+}
+
+.greeting-image-div > * {
+  max-width: 100%;
+  height: auto;
+}
+
+.wave-emoji {
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-name: wave;
+  display: inline-block;
+  transform-origin: 70% 70%;
+  transition: animation-duration 0.3s ease;
+}
+
+.greeting-text:hover .wave-emoji {
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(12deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(9deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.greeting-text-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-and-button {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 52px;
+}
+
+.social-media-div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.typewriter-trailing {
+  font-size: 32px;
+  line-height: 36px;
+  color: #4f5665;
+  margin-top: 0.4rem;
+  font-weight: 600;
+}
+
+.greeting-status {
+  font-size: 32px;
+  line-height: 36px;
+  margin-top: 0.4rem;
+  font-weight: 600;
+  color: #4f5665;
+}
+
+.typewriter-row.dark,
+.typewriter-trailing.dark,
+.greeting-status.dark {
+  color: rgba(226, 232, 240, 0.82);
+}
+
+/* Media Query */
+@media (max-width: 1380px) {
+  .greeting-text {
+    font-size: 50px;
+  }
+  .greeting-text-p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .greet-main {
+    width: 100%;
+    padding: 0 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .main {
+    width: 100%;
+    padding: 16px 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .button-greeting-div {
+    justify-content: center;
+  }
+
+  .greeting-text-div {
+    align-items: center;
+    text-align: center;
+  }
+
+  .greeting-text {
+    font-size: clamp(1.75rem, 7vw, 1.9rem);
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .greeting-text-p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .typewriter-row {
+    /* JS fitTypewriterLine sets exact size; clamp is a safe fallback */
+    font-size: clamp(0.625rem, 2.4vw, 1.05rem);
+    line-height: 1.45;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .typewriter-line,
+  .typewriter-dynamic {
+    white-space: nowrap;
+  }
+
+  .greeting-main {
+    display: block;
+  }
+
+  .greeting-main > * {
+    margin-bottom: 0;
+  }
+
+  .social-and-button {
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 1.75rem;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .button-greeting-div {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .greeting-image-div {
+    height: auto;
+    max-height: none;
+    margin-left: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 360px;
+    margin-inline: auto;
+    overflow: hidden;
+  }
+
+  .greeting-image-div > * {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .typewriter-trailing,
+  .greeting-status {
+    font-size: clamp(0.68rem, 2.9vw + 0.25rem, 1.05rem);
+    line-height: 1.45;
+    text-align: center;
+  }
+
+  .greeting-primary-button .main-button {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+    margin-top: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .greet-main {
+    padding: 0 1rem;
+  }
+
+  .main {
+    padding: 12px 1rem;
+  }
+
+  .greeting-text {
+    font-size: 1.55rem;
+  }
+
+  .typewriter-row {
+    font-size: clamp(0.625rem, 2.35vw, 0.95rem);
+  }
+
+  .typewriter-trailing,
+  .greeting-status {
+    font-size: clamp(0.65rem, 3.1vw + 0.15rem, 0.95rem);
+  }
+
+  .social-and-button {
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .greeting-image-div {
+    max-width: 300px;
+    margin-top: 0.25rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .main,
+  .greet-main {
+    width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
