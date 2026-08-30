@@ -146,6 +146,16 @@
   line-height: 40px;
 }
 
+.typewriter-sentence {
+  font-size: 32px;
+  line-height: 1.45;
+  color: #4f5665;
+  margin-top: 1.2rem;
+  margin-bottom: 0;
+  font-weight: 600;
+  max-width: 42rem;
+}
+
 .typewriter-row {
   font-size: 32px;
   line-height: 36px;
@@ -160,8 +170,8 @@
 
 .typewriter-dynamic {
   font-weight: 700;
-  display: inline-flex;
-  min-width: 300px;
+  display: inline;
+  white-space: nowrap;
   background: linear-gradient(90deg, #a78bfa 0%, #8b5cf6 50%, #7c3aed 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -169,6 +179,7 @@
   -webkit-text-fill-color: transparent;
 }
 
+.typewriter-sentence.dark .typewriter-dynamic,
 .typewriter-row.dark .typewriter-dynamic {
   background: linear-gradient(90deg, #c4b5fd 0%, #a78bfa 50%, #8b5cf6 100%);
   -webkit-background-clip: text;
@@ -183,8 +194,9 @@
 
 .typewriter-cursor {
   display: inline-block;
-  margin-left: 4px;
+  margin-left: 2px;
   color: #9aa0b5;
+  -webkit-text-fill-color: #9aa0b5;
   animation: typewriter-blink 1s steps(2, start) infinite;
 }
 
@@ -275,11 +287,12 @@
 .greeting-status {
   font-size: 32px;
   line-height: 36px;
-  margin-top: 0.4rem;
+  margin-top: 0.85rem;
   font-weight: 600;
   color: #4f5665;
 }
 
+.typewriter-sentence.dark,
 .typewriter-row.dark,
 .typewriter-trailing.dark,
 .greeting-status.dark {
@@ -317,6 +330,11 @@
     text-align: center;
   }
 
+  .typewriter-sentence {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .greeting-text {
     font-size: clamp(1.75rem, 7vw, 1.9rem);
     text-align: center;
@@ -329,18 +347,18 @@
     text-align: center;
   }
 
+  .typewriter-sentence,
   .typewriter-row {
     font-size: 1.05rem;
-    line-height: 1.5;
-    justify-content: center;
+    line-height: 1.55;
     text-align: center;
-    flex-wrap: wrap;
     white-space: normal;
-    gap: 0.4rem;
+    max-width: 22rem;
   }
 
   .typewriter-dynamic {
     min-width: unset;
+    white-space: nowrap;
   }
 
   .greeting-main {

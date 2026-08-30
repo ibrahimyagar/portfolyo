@@ -11,7 +11,7 @@ import StyleContext from "../../contexts/StyleContext";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
-  const roles = useMemo(() => ["Java & Spring Boot", ".NET Core", "React"], []);
+  const roles = useMemo(() => ["Spring Boot", ".NET Core", "React"], []);
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -70,18 +70,18 @@ export default function Greeting() {
                 {name}
                 <span className="wave-emoji">{emoji("👋")}</span>
               </h1>
-              <p className={isDark ? "typewriter-row dark" : "typewriter-row"}>
-                Full-stack geliştirici olarak
-                <span className="typewriter-dynamic">
-                  {` ${displayedText}`}
-                  <span className="typewriter-cursor">_</span>
-                </span>
-              </p>
               <p
                 className={
-                  isDark ? "typewriter-trailing dark" : "typewriter-trailing"
+                  isDark
+                    ? "typewriter-sentence dark"
+                    : "typewriter-sentence"
                 }
               >
+                Full-stack geliştirici olarak{" "}
+                <span className="typewriter-dynamic">
+                  {displayedText || "\u00A0"}
+                  <span className="typewriter-cursor">_</span>
+                </span>{" "}
                 ile ölçeklenebilir çözümler geliştiriyorum.
               </p>
               <p
