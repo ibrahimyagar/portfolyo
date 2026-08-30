@@ -199,6 +199,7 @@
   justify-content: center;
   align-items: center;
   margin-left: 40px;
+  overflow: hidden;
 }
 
 .greeting-image-div > * {
@@ -346,11 +347,39 @@
     display: block;
   }
 
+  .greeting-main > * {
+    margin-bottom: 0;
+  }
+
+  .social-and-button {
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 1.75rem;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .button-greeting-div {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
   .greeting-image-div {
     height: auto;
-    max-height: 260px;
+    max-height: none;
     margin-left: 0;
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 360px;
+    margin-inline: auto;
+    overflow: hidden;
+  }
+
+  .greeting-image-div > * {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100%;
   }
 
   .typewriter-trailing,
@@ -360,15 +389,12 @@
     text-align: center;
   }
 
-  .social-and-button {
-    align-items: center;
-    margin-top: 2rem;
-  }
-
   .greeting-primary-button .main-button {
     width: 100%;
     min-height: 48px;
     justify-content: center;
+    margin-top: 0;
+    margin-right: 0;
   }
 }
 
@@ -388,10 +414,13 @@
   .social-and-button {
     gap: 1rem;
     margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .greeting-image-div {
-    max-height: 220px;
+    max-width: 300px;
+    margin-top: 0.25rem;
+    margin-bottom: 1.25rem;
   }
 }
 

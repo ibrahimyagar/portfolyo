@@ -110,7 +110,7 @@ export default function Greeting() {
             {illustration.animated ? (
               <DisplayLottie
                 animationData={coderAnimation}
-                style={{width: "95%", height: "95%", marginLeft: "40px"}}
+                style={{width: "100%", height: "auto"}}
               />
             ) : (
               <img
