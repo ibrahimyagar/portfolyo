@@ -11,7 +11,7 @@ import StyleContext from "../../contexts/StyleContext";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
-  const roles = useMemo(() => ["Java & Spring Boot", ".NET Core", "React"], []);
+  const roles = useMemo(() => ["Spring Boot", ".NET Core", "React"], []);
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
